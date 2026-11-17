@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "1794950069387",
+    "name": "Avasara Test Scholarship",
+    "type": "Scholarship",
+    "country": "australia",
+    "url": "https://www.anu.edu.au/",
+    "levels": [
+      "M"
+    ],
+    "field": "agriculture",
+    "deadline": "2026-11-28",
+    "funding": "Fully funded",
+    "eligibility": "bachelors",
+    "description": ""
+  }
+]
