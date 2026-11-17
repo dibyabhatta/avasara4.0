@@ -40,7 +40,7 @@ Optional, using the exact listing name as the key:
 Commit the change on GitHub and the live site updates in about a minute. Be careful with commas: every entry except the last in a list needs one.
 
 ## Settings to know
-- **Email:** submissions and "Report a correction" go to agridibu@gmail.com. Change it in `index.html` (Share button) and `CONTACT_EMAIL` in `app.js`.
+- **Email:** submissions and "Report a correction" go to my email. Change it in `index.html` (Share button) and `CONTACT_EMAIL` in `app.js`.
 - **Support links:** Buy Me a Coffee links are in `index.html` (About section and footer).
 
 ## Notes
