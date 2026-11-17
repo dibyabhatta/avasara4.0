@@ -436,10 +436,14 @@
   }
 
   /** Points every "Submit an opportunity" button at the Google Form, when its link is set. */
-  function wireSubmitLinks() {
-    if (!SUBMIT_FORM_URL.startsWith("https://")) return;
-    $$(".js-submit").forEach((a) => { a.href = SUBMIT_FORM_URL; a.target = "_blank"; a.rel = "noopener"; });
-  }
+ function wireSubmitLinks() {
+  $$(".js-submit").forEach((a) => {
+    a.href = SUBMIT_FORM_URL;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.removeAttribute("onclick");
+  });
+}
 
   /* ---------- Tabs: show one section at a time ---------- */
 
