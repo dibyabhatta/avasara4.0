@@ -35,7 +35,7 @@
   const STATUSES = ["Saved", "Preparing", "Submitted", "Interview", "Won", "Rejected"];
   const CONTACT_EMAIL = "agridibu@gmail.com";
   /** Paste your Google Form link between the quotes (it must start with https://). Leave empty to use email. */
-  const SUBMIT_FORM_URL = "";
+  const SUBMIT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf2ORGTOZiMiZCe0DTGqW0CbLUeS5lQXgIaS6kNZgk9tYPqMA/viewform";
   const MS_PER_DAY = 86400000;
 
   /** Whole days from today until a YYYY-MM-DD date, read as a local date. */
