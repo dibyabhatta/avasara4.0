@@ -711,10 +711,15 @@ a.card:hover { border-color: var(--gold); }
 
 /* Founder section — final layout */
 
+
+/* =====================================
+   AVASARA — FOUNDER SECTION
+===================================== */
+
 .founder-layout {
   display: grid;
-  grid-template-columns: 250px minmax(0, 760px);
-  gap: 65px;
+  grid-template-columns: 190px minmax(0, 720px);
+  gap: 55px;
   justify-content: center;
   align-items: start;
   padding: 35px 0 55px;
@@ -726,51 +731,55 @@ a.card:hover { border-color: var(--gold); }
 }
 
 .founder-photo {
-  width: 125px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 8px;
   display: block;
+  width: 145px;
+  height: 175px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 
 .founder-name {
-  font-size: 24px;
-  margin: 18px 0 5px;
+  color: var(--ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+  margin: 16px 0 4px;
 }
 
 .founder-role {
   font-size: 13px;
-  margin: 4px 0;
+  margin: 0;
+  color: var(--tx);
 }
 
 .founder-sidebar .btn {
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .founder-story h2 {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .founder-lead {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 23px;
+  font-size: 22px;
   line-height: 1.5;
   color: var(--ink);
+  margin-bottom: 24px;
 }
 
 .founder-story > p {
-  line-height: 1.9;
-  margin-bottom: 19px;
+  line-height: 1.85;
+  margin: 0 0 18px;
 }
 
 .founder-quote {
   border-left: 3px solid var(--gold);
-  padding: 15px 22px;
-  margin: 30px 0;
+  padding: 14px 22px;
+  margin: 28px 0;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 23px;
+  font-size: 21px;
   line-height: 1.5;
   color: var(--gold);
 }
@@ -779,11 +788,27 @@ a.card:hover { border-color: var(--gold); }
   color: var(--ink);
 }
 
+.founder-contact {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.founder-contact p {
+  max-width: 600px;
+  margin-bottom: 15px;
+}
+
+.founder-contact .btn {
+  display: inline-block;
+}
+
+/* Mobile layout */
+
 @media (max-width: 700px) {
-  .founder-photo {
-    width: 110px;
-    height: 130px;
-  
+  .founder-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px 0 35px;
   }
 
   .founder-sidebar {
@@ -791,21 +816,16 @@ a.card:hover { border-color: var(--gold); }
   }
 
   .founder-photo {
-    width: 155px;
-    height: 180px;
+    width: 115px;
+    height: 140px;
+  }
+
+  .founder-name {
+    font-size: 21px;
+  }
+
+  .founder-lead {
+    font-size: 20px;
   }
 }
-.founder-contact {
-  margin-top: 28px;
-  text-align: left;
-}
 
-.founder-contact p {
-  margin-bottom: 16px;
-  max-width: 600px;
-}
-
-.founder-contact .btn {
-  display: inline-block;
-  margin: 0;
-}
