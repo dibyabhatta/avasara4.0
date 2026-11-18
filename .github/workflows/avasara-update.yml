@@ -1,0 +1,41 @@
+
+name: AVASARA Opportunity Updates
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-opportunities:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout AVASARA
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Import reviewed opportunities
+        run: python automation/import_opportunities.py
+
+      - name: Monitor official pages
+        run: python automation/monitor_official_pages.py
+
+      - name: Upload review results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: avasara-review-results
+          path: |
+            automation/import-status.json
+            automation/review-queue.json
+            automation/page-change-review.json
+          if-no-files-found: warn
