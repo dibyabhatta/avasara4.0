@@ -52,7 +52,6 @@
   const profile = storage.read("avprof", {});
 
   function loadProfileIntoForm() {
-    if (!$("#pn")) return;
     for (const [id, key] of Object.entries(PROFILE_INPUTS)) {
       if (profile[key] != null) $("#" + id).value = profile[key];
     }
@@ -112,29 +111,18 @@
 
   /* ---------- 3. Opportunity board ---------- */
 
-  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff", "#fs", "#fo", "#field-filter"];
+  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff"];
 
   function matchesFilters(opp) {
     const query = $("#q").value.toLowerCase();
-    const type = $("#ft").value, level = $("#fl").value, country = $("#fd").value, funding = $("#ff").value, source = $("#fs").value, field = $("#field-filter")?.value || "";
+    const type = $("#ft").value, level = $("#fl").value, country = $("#fd").value, funding = $("#ff").value, field = $("#ffield")?.value || "";
     return (!type || opp.type === type)
       && (!level || opp.levels.includes(level))
       && (!country || opp.country === country)
       && (!funding || opp.funding === funding)
-      && (!query || `${opp.name} ${opp.country} ${opp.type}`.toLowerCase().includes(query))
-      && (!source || (source === "community") === Boolean(opp.community))
-      && (!$("#fo").checked || isOpenNow(opp))
+      && (!field || (opp.fieldCategory || opp.field || "").includes(field))
+      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""}`.toLowerCase().includes(query))
       && !($("#hide").checked && checkEligibility(opp).status === "no");
-  }
-
-  function opportunitySlug(opp) {
-    return String(opp.name || "opportunity").toLowerCase().normalize("NFKD")
-      .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 70);
-  }
-
-  function shareButtonHtml(opp) {
-    const slug = opportunitySlug(opp);
-    return `<button class="btn" type="button" data-share="${escapeHtml(slug)}" data-share-name="${escapeHtml(opp.name)}">↗ Share</button>`;
   }
 
   function cardHtml(opp) {
@@ -142,20 +130,19 @@
       ? (opp.deadline ? `<p class="note"><b>Deadline (as submitted):</b> ${opp.deadline}</p>` : "")
       : (timing[opp.name] ? `<p class="note"><b>Timing:</b> ${timing[opp.name]}</p>` : "");
     return `<div class="card">
-      <div class="tags"><span>${opp.type}</span><span>${opp.levels.map((l) => LEVELS[l]).join(" · ")}</span><span>${opp.country}</span><span>${opp.funding}</span>${opp.community && opp.field ? `<span>${opp.field}</span>` : ""}</div>
+      <div class="tags"><span>${opp.type}</span><span>${opp.levels.map((l) => LEVELS[l]).join(" · ")}</span><span>${opp.country}</span><span>${opp.funding}</span>${opp.field ? `<span>${escapeHtml(opp.field)}</span>` : ""}${opp.fieldCategory ? `<span>${escapeHtml(opp.fieldCategory)}</span>` : ""}</div>
       ${badgeHtml(opp)}
       <h3>${escapeHtml(opp.name)}</h3>
       ${note}
       ${keyDetailsHtml(opp)}
       <div class="row">
         <a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a>
-        <button class="btn" data-track="${escapeHtml(opp.name)}">＋ Track</button>\n        ${shareButtonHtml(opp)}
-      </div>
+        <button class="btn" data-track="${escapeHtml(opp.name)}">＋ Track</button>
+      </div><div class="share-row"><button class="btn share-btn" data-share="${escapeHtml(opp.name)}" data-share-url="${escapeHtml(opp.url)}">↗ Share opportunity</button></div>
     </div>`;
   }
 
   function renderBoard() {
-    if (!$("#grid")) return;
     const results = opportunities.filter(matchesFilters);
     $("#cnt").textContent = results.length + " opportunities";
     $("#grid").innerHTML = results.map(cardHtml).join("");
@@ -217,7 +204,6 @@
   }
 
   function renderTracker() {
-    if (!$("#tb")) return;
     $("#tb").innerHTML = tracked.length
       ? tracked.map(trackerRowHtml).join("")
       : `<tr><td colspan="7">Nothing tracked yet — press “＋ Track” on any opportunity.</td></tr>`;
@@ -241,12 +227,6 @@
 
   const isOpenThisMonth = ([start, end], month) => (start <= end ? month >= start && month <= end : month >= start || month <= end);
 
-  /** True when a program is typically open this month, or a community deadline is within 30 days. */
-  function isOpenNow(opp) {
-    if (closingMonths[opp.name]) return isOpenThisMonth(closingMonths[opp.name], new Date().getMonth() + 1);
-    return Boolean(opp.community && opp.deadline && daysUntil(opp.deadline) >= 0 && daysUntil(opp.deadline) <= 30);
-  }
-
   function updateClosingSoon() {
     const month = new Date().getMonth() + 1;
     const mine = tracked
@@ -256,27 +236,22 @@
     const openNow = opportunities.filter((opp) => closingMonths[opp.name] && isOpenThisMonth(closingMonths[opp.name], month) && checkEligibility(opp).status !== "no");
     const sharedSoon = community.filter((o) => o.deadline && daysUntil(o.deadline) >= 0 && daysUntil(o.deadline) <= 30 && checkEligibility(o).status !== "no");
 
-    if ($("#soonmine")) $("#soonmine").innerHTML = mine.length
+    $("#soonmine").innerHTML = mine.length
       ? `<h3 style="font-size:22px;margin:0 0 12px">Your deadlines (next 30 days)</h3><div class="grid" style="margin-bottom:34px">${mine.map(({ item, days }) => `
           <div class="card"><span class="badge ${days <= 14 ? "b-no" : "b-maybe"}">${days} day${days === 1 ? "" : "s"} left</span>
           <h3>${escapeHtml(item.name)}</h3><p class="note">Status: ${item.status}</p>
-          <div class="row"><a class="btn dk" href="tracker.html">Open tracker</a></div></div>`).join("")}</div>`
+          <div class="row"><a class="btn dk" href="#tracker">Open tracker</a></div></div>`).join("")}</div>`
       : `<p class="note">Add your own deadlines in Tracker 2.0 and the ones closing within 30 days appear here.</p>`;
 
     const sharedCards = sharedSoon.map((opp) => `<div class="card">${badgeHtml(opp)}<div class="tags"><span>${opp.type}</span><span>${opp.country}</span><span>Community</span></div>
           <h3>${escapeHtml(opp.name)}</h3><p class="note"><b>Deadline (as submitted):</b> ${opp.deadline}. Please confirm on the official page.</p>
           <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div></div>`);
 
-    const openCards = openNow.map((opp) => `<div class="card">${badgeHtml(opp)}<div class="tags"><span>${opp.type}</span><span>${opp.country}</span></div>
+    $("#soongrid").innerHTML = openNow.length + sharedCards.length
+      ? sharedCards.join("") + openNow.map((opp) => `<div class="card">${badgeHtml(opp)}<div class="tags"><span>${opp.type}</span><span>${opp.country}</span></div>
           <h3>${escapeHtml(opp.name)}</h3><p class="note"><b>Timing:</b> ${timing[opp.name] || ""}</p>
-          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div></div>`);
-    const allCards = [...sharedCards, ...openCards];
-
-    if ($("#soongrid")) $("#soongrid").innerHTML = allCards.length
-      ? allCards.slice(0, 3).join("")
-      : `<p class="note">Nothing is typically open this month. Browse the full board.</p>`;
-    if ($("#soonmore")) $("#soonmore").innerHTML = allCards.length > 3
-      ? `<button class="btn" data-filter='{"open":"1"}'>See all ${allCards.length} on the board ↗</button>` : "";
+          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div></div>`).join("")
+      : `<p class="note">Nothing is typically open this month. Browse the full board below.</p>`;
 
     updateTicker(openNow, mine, sharedSoon);
   }
@@ -290,7 +265,6 @@
     if (!messages.length) messages.push("Browse scholarships, internships and summer schools worldwide");
     const html = messages.map((m) => `<span>${escapeHtml(m)}</span>`).join("");
     const track = $("#tickmove");
-    if (!track) return;
     track.innerHTML = html + html; // doubled so the loop is seamless
     track.style.animationDuration = Math.max(30, messages.join("").length / 5) + "s";
   }
@@ -305,7 +279,6 @@
   }
 
   function setupDestinations() {
-    if (!$("#tabs")) return;
     const tabs = Object.keys(universities);
     $("#tabs").innerHTML = tabs.map((t, i) => `<button class="btn${i ? "" : " on"}" data-tab="${t}">${t}</button>`).join("");
     showDestination(tabs[0]);
@@ -319,7 +292,10 @@
     });
     $("#dl").addEventListener("click", (e) => {
       const country = e.target.dataset.country;
-      if (country) openBoard({ country });
+      if (!country) return;
+      $("#fd").value = country;
+      renderBoard();
+      location.hash = "#board";
     });
   }
 
@@ -351,60 +327,31 @@
   }
 
   function populateCountryFilter() {
-    if (!$("#fd")) return;
     [...new Set(opportunities.map((o) => o.country))].sort()
       .forEach((c) => $("#fd").insertAdjacentHTML("beforeend", `<option>${c}</option>`));
   }
 
   function bindEvents() {
-    const on = (selector, type, handler) => { const el = $(selector); if (el) el.addEventListener(type, handler); };
+    FILTER_IDS.forEach((id) => $(id).addEventListener("input", renderBoard));
+    ["#cq", "#ct"].forEach((id) => $(id).addEventListener("input", renderCommunity));
+    $("#clr").onclick = () => { FILTER_IDS.forEach((id) => ($(id).value = "")); renderBoard(); };
 
-    FILTER_IDS.forEach((id) => on(id, "input", renderBoard));
-    on("#clr", "click", () => {
-      FILTER_IDS.forEach((id) => { const el = $(id); if (el.type === "checkbox") el.checked = false; else el.value = ""; });
-      renderBoard();
-    });
-    $$("#pf input, #pf select").forEach((el) => el.addEventListener("input", () => {
-      saveProfileFromForm();
-      renderBoard();
-      updateClosingSoon();
-    }));
+    $$("#pf input, #pf select").forEach((el) => el.addEventListener("input", () => { saveProfileFromForm(); renderBoard(); renderCommunity(); updateClosingSoon(); }));
 
-    /** "＋ Track" saves the opportunity and opens the tracker page. */
-    const trackFromCard = (e) => {
+    [$("#grid"), $("#cgrid")].forEach((grid) => grid.addEventListener("click", (e) => {
       const name = e.target.dataset.track;
       if (!name) return;
       if (!tracked.some((t) => t.name === name)) {
         tracked.push({ name, status: "Saved", deadline: "", docs: DOCUMENTS.map(() => 0), notes: "" });
         saveTracked();
+        renderTracker();
+        updateClosingSoon();
       }
+      e.target.textContent = "✓ Tracked";
       location.hash = "#tracker";
-    };
-    on("#grid", "click", trackFromCard);
-    on("#cgrid", "click", trackFromCard);
-    document.addEventListener("click", async (e) => {
-      const button = e.target.closest("[data-share]");
-      if (!button) return;
-      const name = button.dataset.shareName || "AVASARA opportunity";
-      const url = new URL(window.location.href);
-      url.hash = "opportunity-" + button.dataset.share;
-      const shareUrl = url.toString();
-      const shareData = { title: name + " | AVASARA", text: "Explore this opportunity on AVASARA:", url: shareUrl };
-      try {
-        if (navigator.share) await navigator.share(shareData);
-        else if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(shareUrl);
-          button.textContent = "✓ Link copied";
-          setTimeout(() => { button.textContent = "↗ Share"; }, 2200);
-        } else {
-          window.prompt("Copy this opportunity link:", shareUrl);
-        }
-      } catch (err) {
-        if (err?.name !== "AbortError") window.prompt("Copy this opportunity link:", shareUrl);
-      }
-    });
+    }));
 
-    on("#tb", "change", (e) => {
+    $("#tb").addEventListener("change", (e) => {
       const { i, field, doc } = e.target.dataset;
       const item = tracked[i];
       if (!item) return;
@@ -414,41 +361,15 @@
       if (field !== "notes") renderTracker();
       updateClosingSoon();
     });
-    on("#tb", "click", (e) => {
+    $("#tb").addEventListener("click", (e) => {
       if (e.target.dataset.remove === undefined) return;
       tracked.splice(e.target.dataset.remove, 1);
       saveTracked();
       renderTracker();
       updateClosingSoon();
     });
-    on("#hform", "submit", (e) => { e.preventDefault(); openBoard({ q: $("#hq").value.trim() }); });
-    document.addEventListener("click", (e) => {
-      const chip = e.target.closest("[data-filter]");
-      if (chip) openBoard(JSON.parse(chip.dataset.filter));
-    });
-    on("#exp", "click", exportTrackerCsv);
-    on("#th", "click", toggleTheme);
-  }
-
-  /* ---------- Search, chips and links into the board ---------- */
-
-  const BOARD_FILTERS = { q: "#q", type: "#ft", level: "#fl", country: "#fd", funding: "#ff", source: "#fs", field: "#field-filter" };
-
-  /** Sets the board's filters from an object such as { level: "M", country: "Japan", open: "1" }. */
-  function applyBoardFilters(filters) {
-    for (const [key, selector] of Object.entries(BOARD_FILTERS)) {
-      if (filters[key] !== undefined && $(selector)) $(selector).value = filters[key];
-    }
-    if ($("#fo")) $("#fo").checked = filters.open === "1";
-    renderBoard();
-  }
-
-  /** Opens the Scholarships page with these filters (they travel in the URL). */
-  function openBoard(filters) {
-    for (const [key, selector] of Object.entries(BOARD_FILTERS)) if ($(selector)) $(selector).value = filters[key] ?? "";
-    $("#fo").checked = filters.open === "1";
-    renderBoard();
-    location.hash = "#scholarships";
+    $("#exp").onclick = exportTrackerCsv;
+    $("#th").onclick = toggleTheme;
   }
 
   /* ---------- Community submissions ----------
@@ -484,7 +405,7 @@
       const list = await response.json();
       const seen = new Set();
       (Array.isArray(list) ? list : []).map(cleanCommunityEntry).filter(Boolean).forEach((entry) => {
-        if (!seen.has(entry.url)) { seen.add(entry.url); community.push(entry); opportunities.push(entry); }
+        if (!seen.has(entry.url)) { seen.add(entry.url); community.push(entry); }
       });
     } catch { /* offline, or opened as a local file: the built-in listings still work */ }
   }
@@ -506,30 +427,54 @@
     </dl></details>`;
   }
 
+  function renderCommunity() {
+    const query = $("#cq").value.toLowerCase(), type = $("#ct").value;
+    const results = community.filter((o) => (!type || o.type === type) && (!query || `${o.name} ${o.country} ${o.field}`.toLowerCase().includes(query)));
+    $("#ccnt").textContent = community.length ? `${results.length} shared by the community` : "";
+    $("#cgrid").innerHTML = results.length
+      ? results.map(cardHtml).join("")
+      : `<p class="note">${community.length ? "No matches." : "No community opportunities yet. Be the first to share one."}</p>`;
+  }
+
   /** Points every "Submit an opportunity" button at the Google Form, when its link is set. */
-  function wireSubmitLinks() {
-    if (!SUBMIT_FORM_URL.startsWith("https://")) return;
-    $$(".js-submit").forEach((a) => { a.href = SUBMIT_FORM_URL; a.target = "_blank"; a.rel = "noopener"; });
+ function wireSubmitLinks() {
+  $$(".js-submit").forEach((a) => {
+    a.href = SUBMIT_FORM_URL;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.removeAttribute("onclick");
+  });
+}
+
+  /* ---------- Tabs: show one section at a time ---------- */
+
+  const VIEWS = ["home", "scholarships", "community", "destinations", "tracker", "toolkit", "academy", "about"];
+  const VIEW_OF = { soon: "home", match: "scholarships", board: "scholarships", unis: "destinations", portals: "destinations" };
+
+  /** Reads the URL hash (for example #tracker) and shows only that tab. */
+  function route() {
+    const id = location.hash.slice(1);
+    const view = VIEWS.includes(id) ? id : VIEW_OF[id] || "home";
+    $$("[data-view]").forEach((el) => { el.hidden = !el.dataset.view.split(" ").includes(view); });
+    $$("nav a").forEach((link) => link.classList.toggle("on", link.getAttribute("href") === "#" + view));
+    const target = id && !VIEWS.includes(id) ? document.getElementById(id) : null;
+    if (target) target.scrollIntoView(); else window.scrollTo(0, 0);
   }
 
   function start() {
     applySavedTheme();
-    wireSubmitLinks();
-    if ($("#n1")) $("#n1").textContent = opportunities.length;
+    $("#n1").textContent = opportunities.length;
     populateCountryFilter();
-    applyBoardFilters(Object.fromEntries(new URLSearchParams(location.search))); // filters passed in the URL
     loadProfileIntoForm();
     setupDestinations();
     bindEvents();
+    wireSubmitLinks();
     renderBoard();
     renderCommunity();
-    const sharedSlug = location.hash.match(/^#opportunity-(.+)$/)?.[1];
-    if (sharedSlug) {
-      const target = document.getElementById("opportunity-" + sharedSlug);
-      if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "center" }));
-    }
     renderTracker();
     updateClosingSoon();
+    window.addEventListener("hashchange", route);
+    route();
     document.fonts.load("700 28px 'Poppins'").then(() => document.fonts.ready).then(centerLogoGlyphs).catch(() => {});
   }
 

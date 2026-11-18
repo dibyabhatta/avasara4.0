@@ -18,13 +18,13 @@
  */
 (() => {
   const PAGES = [
-    ["index.html", "Home", "home"],
-    ["scholarships.html", "Scholarships", "scholarships"],
-    ["destinations.html", "Destinations", "destinations"],
-    ["tracker.html", "Tracker 2.0", "tracker"],
-    ["toolkit.html", "Toolkit", "toolkit"],
-    ["academy.html", "Academy", "academy"],
-    ["about.html", "About", "about"],
+    ["#home", "Home", "home"],
+    ["#scholarships", "Scholarships", "scholarships"],
+    ["#destinations", "Destinations", "destinations"],
+    ["#tracker", "Tracker 2.0", "tracker"],
+    ["#toolkit", "Toolkit", "toolkit"],
+    ["#academy", "Academy", "academy"],
+    ["#about", "About", "about"],
   ];
   const current = document.body.dataset.page;
   const nav = PAGES.map(([href, label, key]) => `<a href="${href}"${key === current ? ' class="on" aria-current="page"' : ""}>${label}</a>`).join("");
@@ -34,12 +34,13 @@
 <div class="tick"><a href="index.html#soon"><span class="live"><i></i>Closing soon</span><span class="wrap"><span class="move" id="tickmove">Browse opportunities worldwide</span></span></a></div>
 <header><a class="logo" href="index.html">${logo}</a>
 <nav>${nav}</nav>
-<span><button class="btn" id="th" aria-label="Toggle theme">☾</button> <a class="btn" href="scholarships.html">Explore opportunities ↗</a></span></header>`);
+<form class="global-search" id="globalSearch" role="search"><input id="globalQ" type="search" placeholder="Search Avasara…" aria-label="Search Avasara"><button class="btn" type="submit">↗</button></form>
+<span><button class="btn" id="th" aria-label="Toggle theme">☾</button> <a class="btn" href="#scholarships">Explore ↗</a></span></header>`);
 
   document.addEventListener("DOMContentLoaded", () => {
     document.body.insertAdjacentHTML("beforeend", `
 <footer><a class="logo" href="index.html" style="margin:0">${logo}</a><span>Find your opportunity. Shape your future.</span>
-<span><a href="about.html">About</a><a href="scholarships.html">Scholarships</a><a href="tracker.html">Tracker</a><a href="https://buymeacoffee.com/dibyabhatta" target="_blank" rel="noopener">☕ Support</a></span></footer>`);
+<span><a href="#about">About</a><a href="#scholarships">Scholarships</a><a href="#tracker">Tracker</a><a href="https://buymeacoffee.com/dibyabhatta" target="_blank" rel="noopener">☕ Support</a></span></footer>`);
   });
 })();
 </script>
@@ -69,9 +70,9 @@
 <div class="stats"><div><b id="n1">0</b>listings</div><div><b>4</b>opportunity types</div><div><b>3</b>degree levels</div><div><b>Official</b>source-first links</div></div></section>
 
 <section style="padding-top:10px"><div class="eyebrow">How it works</div><h2>Three steps, <em>no guesswork.</em></h2><div class="grid steps">
-<a class="card" href="scholarships.html"><span class="num">1</span><h3>Search</h3><p>Filter by level, country, funding and type.</p></a>
+<a class="card" href="#scholarships"><span class="num">1</span><h3>Search</h3><p>Filter by level, country, funding and type.</p></a>
 <a class="card" href="scholarships.html#match"><span class="num">2</span><h3>Check eligibility</h3><p>Add your details once and see a badge on every listing.</p></a>
-<a class="card" href="tracker.html"><span class="num">3</span><h3>Track</h3><p>Save opportunities, set deadlines and tick off documents.</p></a>
+<a class="card" href="#tracker"><span class="num">3</span><h3>Track</h3><p>Save opportunities, set deadlines and tick off documents.</p></a>
 </div></section>
 
 <section id="soon" style="padding-bottom:20px"><div class="eyebrow">Closing soon</div><h2>Don’t miss <em>these.</em></h2>
@@ -82,7 +83,7 @@
 
 <section style="padding-top:10px"><div class="teaser"><img class="teaser-photo" src="1O1A9320.jpeg" alt="Dibya Bhatta, founder of Avasara" onerror="this.style.display='none'">
 <div><div class="eyebrow">Why Avasara</div><p class="teaser-quote">“Opportunities are everywhere. Finding the right one shouldn't be the hardest part.”</p>
-<p class="note">Dibya Bhatta, founder · PhD researcher at ANU</p><a class="btn" href="about.html">Read my story ↗</a></div></div></section>
+<p class="note">Dibya Bhatta, founder · PhD researcher at ANU</p><a class="btn" href="#about">Read my story ↗</a></div></div></section>
 <div class="cta"><h2 style="margin:0">Know an opportunity?<br><em style="font-style:italic">Pass it forward.</em></h2>
 <p style="max-width:480px">Have an official scholarship announcement, useful resource or correction? Help keep Avasara useful for the next person searching for a chance.</p>
 <a class="btn dk js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Share an opportunity ↗</a></div>
@@ -100,15 +101,15 @@
 <label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="hide"> Hide not eligible</label></div>
 <p id="sum" class="note"></p></details>
 <div class="filters"><input id="q" placeholder="Search name, country, keyword…">
-<select id="ft"><option value="">All types</option><option>Scholarship</option><option>Research</option><option>Internship</option><option>Summer school</option></select>
+<select id="ft"><option value="">All types</option><option>Scholarship</option><option>Research</option><option>Internship</option><option>Summer school</option><option>Postdoctoral</option></select>
 <select id="fl"><option value="">All levels</option><option value="S">Grade 11–12</option><option value="B">Bachelor</option><option value="M">Master</option><option value="P">PhD</option></select>
 <select id="fd"><option value="">All destinations</option></select>
+<select id="ffield"><option value="">All fields</option><option>Engineering & Technology</option><option>Computer Science, AI & Data Science</option><option>Medicine & Health</option><option>Biological Sciences & Biotechnology</option><option>Chemistry, Physics & Mathematics</option><option>Environmental Science & Climate</option><option>Agriculture & Food Science</option><option>Business, Economics & Finance</option><option>Law & International Relations</option><option>Social Sciences & Psychology</option><option>Education</option><option>Arts, Humanities & Languages</option><option>Architecture & Design</option><option>Media & Communications</option><option>Public Policy & Development</option></select>
 <select id="ff"><option value="">Any funding</option><option>Fully funded</option><option>Partial</option><option>Paid</option><option>Varies</option></select>
-<select id="field-filter"><option value="">All subjects</option><option value="unclassified">Subject not specified</option><option>Engineering &amp; Technology</option><option>Computer Science &amp; IT</option><option>Medicine &amp; Health</option><option>Business &amp; Economics</option><option>Science &amp; Mathematics</option><option>Environment &amp; Agriculture</option><option>Social Sciences &amp; Humanities</option><option>Law &amp; Policy</option><option>Arts &amp; Design</option><option>Education</option></select>
 <select id="fs"><option value="">All sources</option><option value="curated">Curated by Avasara</option><option value="community">Shared by community</option></select>
 <label class="open-now"><input type="checkbox" id="fo"> Open around now</label>
 <button class="btn" id="clr">Clear</button></div>
-<p class="note" id="cnt"></p><p class="note">Subject filters use field information where it has been supplied. Many curated listings do not yet have a verified subject tag; use “Subject not specified” to find those.</p><div class="grid" id="grid"></div>
+<p class="note" id="cnt"></p><div class="grid" id="grid"></div>
 <p class="note">Listings are leads, not guarantees. “Timing” is the usual window or last confirmed cycle, so confirm the exact deadline on the official page, then add it in Tracker 2.0.</p>
 <p>Know one we missed? <a class="btn js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Submit an opportunity ↗</a></p></section>
 </div>
@@ -136,7 +137,7 @@
 <label class="chk"><input type="checkbox" id="cvpd"> Include date of birth and nationality</label>
 <label>Photo file (optional, not saved)</label><input type="file" id="cvphoto" accept="image/*">
 <div id="cvfields"></div></div>
-<div><p><button class="btn dk" id="cvprint">Download PDF (print) ↗</button></p><p><a class="btn" href="https://europass.europa.eu/en/create-europass-cv" target="_blank" rel="noopener noreferrer">Create an official Europass CV ↗</a></p><div id="cvprev"></div>
+<div><p><button class="btn dk" id="cvprint">Print / Save PDF ↗</button> <button class="btn" id="cvword">Download editable Word template</button> <a class="btn" href="https://europass.europa.eu/en/create-europass-cv" target="_blank" rel="noopener">Europass CV ↗</a></p><div id="cvprev"></div>
 <p class="note">In the print window choose “Save as PDF”. Conventions shown are typical; always follow the program’s own instructions.</p></div></div>
 <div id="tk-em" class="tk" style="display:none"><div>
 <label>Professor’s country</label><select id="emdest"></select>
@@ -214,19 +215,16 @@
         the chance to find theirs.
       </blockquote>
 
+      <div class="card candid-card">
+        <div class="eyebrow">Candid with Candidates</div>
+        <h3>Real journeys. Honest conversations.</h3>
+        <p>Stories, insights and conversations with people navigating scholarships, study and career opportunities.</p>
+        <a class="btn dk" href="https://www.youtube.com/watch?v=UwiYEOVU8yQ" target="_blank" rel="noopener">Watch the series ↗</a>
+      </div>
+
       <p class="founder-signoff">
         Thank you for being part of this journey.
       </p>
-
-      <div class="candidates-feature">
-        <div class="eyebrow">Conversations</div>
-        <h3>Candid with Candidates</h3>
-        <p>Real people, honest conversations and the journeys behind ambition. Explore the series and hear directly from candidates about their experiences.</p>
-        <div class="candidates-video">
-          <iframe src="https://www.youtube-nocookie.com/embed/UwiYEOVU8yQ" title="Candid with Candidates" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <a class="btn" href="https://www.youtube.com/watch?v=UwiYEOVU8yQ" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
-      </div>
 
       <div class="founder-contact">
         <p>If you want personal guidance with your application, you can reach me here.</p>
@@ -265,6 +263,22 @@
  */
 const AVASARA = {
   opportunities: [
+    {"name":"Marie Skłodowska-Curie Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"},
+    {"name":"Alexander von Humboldt Research Fellowship","type":"Postdoctoral","levels":["P"],"country":"Germany","funding":"Fully funded","url":"https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"},
+    {"name":"JSPS Postdoctoral Fellowship for Research in Japan","type":"Postdoctoral","levels":["P"],"country":"Japan","funding":"Fully funded","url":"https://www.jsps.go.jp/english/e-fellow/"},
+    {"name":"EMBO Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships/"},
+    {"name":"HFSP Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Global","funding":"Fully funded","url":"https://www.hfsp.org/funding/postdoctoral-fellowships"},
+    {"name":"Wellcome Early-Career Awards","type":"Postdoctoral","levels":["P"],"country":"United Kingdom / Global","funding":"Varies","url":"https://wellcome.org/grant-funding/schemes/early-career-awards"},
+    {"name":"NIH Postdoctoral Research Opportunities","type":"Postdoctoral","levels":["P"],"country":"USA","funding":"Paid","url":"https://www.training.nih.gov/"},
+    {"name":"Banting Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Canada","funding":"Fully funded","url":"https://banting.fellowships-bourses.gc.ca/"},
+    {"name":"Marie Skłodowska-Curie Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"},
+    {"name":"Alexander von Humboldt Research Fellowship","type":"Postdoctoral","levels":["P"],"country":"Germany","funding":"Fully funded","url":"https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"},
+    {"name":"JSPS Postdoctoral Fellowship for Research in Japan","type":"Postdoctoral","levels":["P"],"country":"Japan","funding":"Fully funded","url":"https://www.jsps.go.jp/english/e-fellow/"},
+    {"name":"EMBO Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships/"},
+    {"name":"HFSP Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Global","funding":"Fully funded","url":"https://www.hfsp.org/funding/postdoctoral-fellowships"},
+    {"name":"Wellcome Early-Career Awards","type":"Postdoctoral","levels":["P"],"country":"United Kingdom / Global","funding":"Varies","url":"https://wellcome.org/grant-funding/schemes/early-career-awards"},
+    {"name":"NIH Postdoctoral Research Opportunities","type":"Postdoctoral","levels":["P"],"country":"USA","funding":"Paid","url":"https://www.training.nih.gov/"},
+    {"name":"Banting Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Canada","funding":"Fully funded","url":"https://banting.fellowships-bourses.gc.ca/"},
     {"name":"Chevening Scholarships","type":"Scholarship","levels":["M"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.chevening.org"},
     {"name":"Commonwealth Scholarships","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://cscuk.fcdo.gov.uk"},
     {"name":"Gates Cambridge","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.gatescambridge.org"},
@@ -872,29 +886,42 @@ const AVASARA = {
 
   /* ---------- 3. Opportunity board ---------- */
 
-  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff", "#fs", "#fo", "#field-filter"];
+  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff", "#fs", "#fo", "#ffield"];
+
+  function inferField(opp) {
+    const t = `${opp.name} ${opp.field || ""}`.toLowerCase();
+    const map = [
+      ["Engineering & Technology", /engineer|technology|robot|civil|mechanical|electrical/],
+      ["Computer Science, AI & Data Science", /computer|software|data|artificial intelligence|\bai\b|machine learning|cyber/],
+      ["Medicine & Health", /medical|medicine|health|clinical|nurs|public health/],
+      ["Biological Sciences & Biotechnology", /biolog|biotech|molecular|genetic|life science/],
+      ["Chemistry, Physics & Mathematics", /chem|physics|math|statistic/],
+      ["Environmental Science & Climate", /environment|climate|sustain|ecolog/],
+      ["Agriculture & Food Science", /agric|food|forestry|animal|plant/],
+      ["Business, Economics & Finance", /business|econom|finance|management/],
+      ["Law & International Relations", /law|legal|international relation|diplom/],
+      ["Social Sciences & Psychology", /social science|psycholog|sociolog/],
+      ["Education", /education|teaching|teacher/],
+      ["Arts, Humanities & Languages", /humanit|language|history|philosoph|arts/],
+      ["Architecture & Design", /architect|design/],
+      ["Media & Communications", /media|communication|journalism/],
+      ["Public Policy & Development", /policy|development|governance/]
+    ];
+    return map.filter(([label, re]) => re.test(t)).map(([label]) => label).join(" ");
+  }
 
   function matchesFilters(opp) {
     const query = $("#q").value.toLowerCase();
-    const type = $("#ft").value, level = $("#fl").value, country = $("#fd").value, funding = $("#ff").value, source = $("#fs").value, field = $("#field-filter")?.value || "";
+    const type = $("#ft").value, level = $("#fl").value, country = $("#fd").value, funding = $("#ff").value, source = $("#fs").value, field = $("#ffield")?.value || "";
     return (!type || opp.type === type)
       && (!level || opp.levels.includes(level))
       && (!country || opp.country === country)
       && (!funding || opp.funding === funding)
-      && (!query || `${opp.name} ${opp.country} ${opp.type}`.toLowerCase().includes(query))
+      && (!field || (opp.fieldCategory || inferField(opp)).includes(field))
+      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""}`.toLowerCase().includes(query))
       && (!source || (source === "community") === Boolean(opp.community))
       && (!$("#fo").checked || isOpenNow(opp))
       && !($("#hide").checked && checkEligibility(opp).status === "no");
-  }
-
-  function opportunitySlug(opp) {
-    return String(opp.name || "opportunity").toLowerCase().normalize("NFKD")
-      .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 70);
-  }
-
-  function shareButtonHtml(opp) {
-    const slug = opportunitySlug(opp);
-    return `<button class="btn" type="button" data-share="${escapeHtml(slug)}" data-share-name="${escapeHtml(opp.name)}">↗ Share</button>`;
   }
 
   function cardHtml(opp) {
@@ -909,8 +936,8 @@ const AVASARA = {
       ${keyDetailsHtml(opp)}
       <div class="row">
         <a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a>
-        <button class="btn" data-track="${escapeHtml(opp.name)}">＋ Track</button>\n        ${shareButtonHtml(opp)}
-      </div>
+        <button class="btn" data-track="${escapeHtml(opp.name)}">＋ Track</button>
+      </div><div class="share-row"><button class="btn share-btn" data-share="${escapeHtml(opp.name)}" data-share-url="${escapeHtml(opp.url)}">↗ Share opportunity</button></div>
     </div>`;
   }
 
@@ -1020,16 +1047,16 @@ const AVASARA = {
       ? `<h3 style="font-size:22px;margin:0 0 12px">Your deadlines (next 30 days)</h3><div class="grid" style="margin-bottom:34px">${mine.map(({ item, days }) => `
           <div class="card"><span class="badge ${days <= 14 ? "b-no" : "b-maybe"}">${days} day${days === 1 ? "" : "s"} left</span>
           <h3>${escapeHtml(item.name)}</h3><p class="note">Status: ${item.status}</p>
-          <div class="row"><a class="btn dk" href="tracker.html">Open tracker</a></div></div>`).join("")}</div>`
+          <div class="row"><a class="btn dk" href="#tracker">Open tracker</a></div></div>`).join("")}</div>`
       : `<p class="note">Add your own deadlines in Tracker 2.0 and the ones closing within 30 days appear here.</p>`;
 
     const sharedCards = sharedSoon.map((opp) => `<div class="card">${badgeHtml(opp)}<div class="tags"><span>${opp.type}</span><span>${opp.country}</span><span>Community</span></div>
           <h3>${escapeHtml(opp.name)}</h3><p class="note"><b>Deadline (as submitted):</b> ${opp.deadline}. Please confirm on the official page.</p>
-          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div></div>`);
+          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div><div class="share-row"><button class="btn share-btn" data-share="${escapeHtml(opp.name)}" data-share-url="${escapeHtml(opp.url)}">↗ Share opportunity</button></div></div>`);
 
     const openCards = openNow.map((opp) => `<div class="card">${badgeHtml(opp)}<div class="tags"><span>${opp.type}</span><span>${opp.country}</span></div>
           <h3>${escapeHtml(opp.name)}</h3><p class="note"><b>Timing:</b> ${timing[opp.name] || ""}</p>
-          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div></div>`);
+          <div class="row"><a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a></div><div class="share-row"><button class="btn share-btn" data-share="${escapeHtml(opp.name)}" data-share-url="${escapeHtml(opp.url)}">↗ Share opportunity</button></div></div>`);
     const allCards = [...sharedCards, ...openCards];
 
     if ($("#soongrid")) $("#soongrid").innerHTML = allCards.length
@@ -1131,7 +1158,14 @@ const AVASARA = {
     }));
 
     /** "＋ Track" saves the opportunity and opens the tracker page. */
-    const trackFromCard = (e) => {
+    const trackFromCard = async (e) => {
+      const share = e.target.closest("[data-share]");
+      if (share) {
+        const title = share.dataset.share, url = share.dataset.shareUrl, text = `${title} — opportunity via Avasara`;
+        try { if (navigator.share) await navigator.share({ title, text, url }); else { await navigator.clipboard.writeText(`${text}\n${url}`); share.textContent = "Copied!"; } }
+        catch (err) { if (err.name !== "AbortError") { try { await navigator.clipboard.writeText(`${text}\n${url}`); share.textContent = "Copied!"; } catch {} } }
+        return;
+      }
       const name = e.target.dataset.track;
       if (!name) return;
       if (!tracked.some((t) => t.name === name)) {
@@ -1142,27 +1176,7 @@ const AVASARA = {
     };
     on("#grid", "click", trackFromCard);
     on("#cgrid", "click", trackFromCard);
-    document.addEventListener("click", async (e) => {
-      const button = e.target.closest("[data-share]");
-      if (!button) return;
-      const name = button.dataset.shareName || "AVASARA opportunity";
-      const url = new URL(window.location.href);
-      url.hash = "opportunity-" + button.dataset.share;
-      const shareUrl = url.toString();
-      const shareData = { title: name + " | AVASARA", text: "Explore this opportunity on AVASARA:", url: shareUrl };
-      try {
-        if (navigator.share) await navigator.share(shareData);
-        else if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(shareUrl);
-          button.textContent = "✓ Link copied";
-          setTimeout(() => { button.textContent = "↗ Share"; }, 2200);
-        } else {
-          window.prompt("Copy this opportunity link:", shareUrl);
-        }
-      } catch (err) {
-        if (err?.name !== "AbortError") window.prompt("Copy this opportunity link:", shareUrl);
-      }
-    });
+    on("#soongrid", "click", trackFromCard);
 
     on("#tb", "change", (e) => {
       const { i, field, doc } = e.target.dataset;
@@ -1192,7 +1206,7 @@ const AVASARA = {
 
   /* ---------- Search, chips and links into the board ---------- */
 
-  const BOARD_FILTERS = { q: "#q", type: "#ft", level: "#fl", country: "#fd", funding: "#ff", source: "#fs", field: "#field-filter" };
+  const BOARD_FILTERS = { q: "#q", type: "#ft", level: "#fl", country: "#fd", funding: "#ff", source: "#fs" };
 
   /** Sets the board's filters from an object such as { level: "M", country: "Japan", open: "1" }. */
   function applyBoardFilters(filters) {
@@ -1282,12 +1296,6 @@ const AVASARA = {
     setupDestinations();
     bindEvents();
     renderBoard();
-    renderCommunity();
-    const sharedSlug = location.hash.match(/^#opportunity-(.+)$/)?.[1];
-    if (sharedSlug) {
-      const target = document.getElementById("opportunity-" + sharedSlug);
-      if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "center" }));
-    }
     renderTracker();
     updateClosingSoon();
     document.fonts.load("700 28px 'Poppins'").then(() => document.fonts.ready).then(centerLogoGlyphs).catch(() => {});
@@ -1398,6 +1406,10 @@ const AVASARA = {
     $("#cvphoto").addEventListener("change", e => { const f = e.target.files[0]; if (!f)
         return; const r = new FileReader(); r.onload = () => { photo = r.result; cv(); }; r.readAsDataURL(f); });
     $("#cvprint").onclick = () => window.print();
+    $("#cvword").onclick = () => {
+      const content = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#23352f;margin:36px}h3{font-size:22px;margin:0 0 8px}h4{border-bottom:1px solid #999;padding-bottom:4px;margin-top:20px}p,li{font-size:11pt;line-height:1.45}img{max-width:100px;max-height:120px}</style></head><body>${$("#cvprev").innerHTML}</body></html>`;
+      const blob = new Blob([content], {type:"application/msword"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="Avasara-CV-Template.doc"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    };
     $("#emcopy").onclick = async () => { const v = $("#emout"); try {
         await navigator.clipboard.writeText(v.value);
     }
@@ -1429,14 +1441,16 @@ const AVASARA = {
   });
   function route() {
     const id = location.hash.slice(1);
-    const sharedOpportunity = id.startsWith("opportunity-");
-    const view = sharedOpportunity ? "scholarships" : (VIEWS.includes(id) ? id : VIEW_OF[id] || "home");
+    const view = VIEWS.includes(id) ? id : VIEW_OF[id] || "home";
     document.querySelectorAll("[data-view]").forEach((el) => { el.hidden = el.dataset.view !== view; });
     document.querySelectorAll("nav a").forEach((l) => l.classList.toggle("on", l.getAttribute("href") === "#" + view));
-    const t = sharedOpportunity ? document.getElementById(id) : (id && !VIEWS.includes(id) ? document.getElementById(id) : null);
+    const t = id && !VIEWS.includes(id) ? document.getElementById(id) : null;
     if (t) t.scrollIntoView(); else window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", route); route();
 })();
+</script>
+<script>
+(() => { const form=document.getElementById('globalSearch'); if(!form)return; form.addEventListener('submit',e=>{e.preventDefault(); const q=document.getElementById('globalQ').value.trim(); location.hash='scholarships'; setTimeout(()=>{const local=document.getElementById('q'); if(local){local.value=q; local.dispatchEvent(new Event('input',{bubbles:true})); local.focus();}},80); }); })();
 </script>
 </body></html>

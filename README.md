@@ -50,3 +50,25 @@ Commit the change on GitHub and the live site updates in about a minute. Be care
 
 ## Community submissions
 Students submit opportunities through a Google Form. You approve them in the linked Google Sheet, and an Apps Script writes the approved ones to `community.json`, which the site reads. See `apps-script/Code.gs` and `apps-script/SETUP.md`. `community.json` must stay in the repository root next to `index.html`. It needs a web server to load, so it works on GitHub Pages but not when you open `index.html` straight from your computer.
+
+## AVASARA 4.0 — launch polish update
+
+This build keeps the original one-page design and adds/fixes:
+- Hash-based navigation for About, Scholarships, Tracker, Toolkit and other tabs (no missing `.html` pages).
+- Global header search and expanded subject filter.
+- Postdoctoral opportunities from official fellowship providers.
+- Share buttons on opportunity cards (native share sheet where supported; clipboard fallback).
+- CV Studio: print/save PDF, Word-compatible editable `.doc` export, and Europass link.
+- Candid with Candidates video link in About.
+- Restored closing-soon ticker and smaller heading scale.
+
+
+## Publish with GitHub Pages
+1. Upload/replace the repository files from this ZIP.
+2. Keep `index.html`, `style.css`, `data.js`, `app.js`, `toolkit.js`, `community.json`, and the founder image together in the repository root.
+3. In GitHub, open **Settings → Pages** and confirm deployment from the main branch/root folder.
+4. Open the published URL and test the nav tabs, search, opportunity share, tracker, Toolkit exports, and About.
+
+
+## Notes
+The main site currently contains its own inline data and application scripts. `app.js` and `data.js` are retained as companion/reference files from the original project. Opportunity deadlines and typical opening windows must be verified on the official provider pages.

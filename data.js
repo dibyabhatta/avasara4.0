@@ -16,6 +16,14 @@
  */
 const AVASARA = {
   opportunities: [
+    {"name":"Marie Skłodowska-Curie Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"},
+    {"name":"Alexander von Humboldt Research Fellowship","type":"Postdoctoral","levels":["P"],"country":"Germany","funding":"Fully funded","url":"https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"},
+    {"name":"JSPS Postdoctoral Fellowship for Research in Japan","type":"Postdoctoral","levels":["P"],"country":"Japan","funding":"Fully funded","url":"https://www.jsps.go.jp/english/e-fellow/"},
+    {"name":"EMBO Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships/"},
+    {"name":"HFSP Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Global","funding":"Fully funded","url":"https://www.hfsp.org/funding/postdoctoral-fellowships"},
+    {"name":"Wellcome Early-Career Awards","type":"Postdoctoral","levels":["P"],"country":"United Kingdom / Global","funding":"Varies","url":"https://wellcome.org/grant-funding/schemes/early-career-awards"},
+    {"name":"NIH Postdoctoral Research Opportunities","type":"Postdoctoral","levels":["P"],"country":"USA","funding":"Paid","url":"https://www.training.nih.gov/"},
+    {"name":"Banting Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Canada","funding":"Fully funded","url":"https://banting.fellowships-bourses.gc.ca/"},
     {"name":"Chevening Scholarships","type":"Scholarship","levels":["M"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.chevening.org"},
     {"name":"Commonwealth Scholarships","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://cscuk.fcdo.gov.uk"},
     {"name":"Gates Cambridge","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.gatescambridge.org"},
