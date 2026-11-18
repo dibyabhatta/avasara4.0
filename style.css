@@ -795,4 +795,17 @@ a.card:hover { border-color: var(--gold); }
     height: 180px;
   }
 }
+.founder-contact {
+  margin-top: 28px;
+  text-align: left;
+}
 
+.founder-contact p {
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+
+.founder-contact .btn {
+  display: inline-block;
+  margin: 0;
+}
