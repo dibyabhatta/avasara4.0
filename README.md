@@ -72,3 +72,21 @@ This build keeps the original one-page design and adds/fixes:
 
 ## Notes
 The main site currently contains its own inline data and application scripts. `app.js` and `data.js` are retained as companion/reference files from the original project. Opportunity deadlines and typical opening windows must be verified on the official provider pages.
+
+## Global opportunity automation (new)
+
+This release adds an **operational, conservative GitHub Actions discovery and review pipeline**. It runs twice daily and on demand via **Actions → AVASARA opportunity discovery and review queue → Run workflow**. It reads `automation/sources/registry.json` and reviewed JSON files in `automation/inbox/`, deduplicates by official URL, archives records with past published deadlines, and writes `automated-opportunities.json`, `automation/review-queue.json`, and `automation/import-status.json`. The website loads reviewed entries alongside the existing curated data and displays a searchable directory of official university, government, and research job portals.
+
+**Important launch distinction:** All 15 initial official portal sources are `link_only` until a permitted machine-readable feed or API has been confirmed. Therefore the scheduled job is functional but does not yet ingest vacancies from WUR, ANU, CSIRO, etc. automatically. Do not interpret the portal directory as individual job listings. To activate a verified supported source, see `automation/sources/README.md` (RSS/Atom or Greenhouse public job-board API). Newly discovered feed items go to the review queue, not directly onto the public site. The source registry can be expanded to any country or institution.
+
+To publish a reviewed record, add a JSON array in `automation/inbox/my-reviewed-opportunities.json` with each item's `name`, `country`, `type`, `levels`, `funding`, official HTTPS `url`, `reviewed: true`, and `officialSourceConfirmed: true`. Optionally include `majors`, `discoverySubjects`, `deadline` (YYYY-MM-DD), `verifiedOn`, `fundingSource`, `institution`, and `majorEligibilityStatus`. Run the workflow. This explicit human gate prevents unsupported subjects, invented deadlines and misleading funding claims. For example:
+
+```json
+[{"name":"Example verified award","country":"Australia","type":"Scholarship","levels":["P"],"funding":"Varies","url":"https://example.edu/scholarship/award","majors":["All eligible majors"],"majorEligibilityStatus":"verified","reviewed":true,"officialSourceConfirmed":true}]
+```
+
+This example is documentation only, not an actual scholarship. **Never mark `reviewed` or `officialSourceConfirmed` true without checking the official individual posting and eligibility.**
+
+On GitHub, Actions must be enabled and workflow permissions must allow **Read and write** access (`Settings → Actions → General → Workflow permissions`). Branch protection may require a pull-request-based commit workflow instead. GitHub Pages should deploy from `main` root. Local `file://` opening still shows the existing curated database, but browser fetches of automation JSON require GitHub Pages or a local HTTP server.
+
+No private credentials are embedded in the website. Social submissions remain manual and moderated. Existing tracker records remain in each visitor's local browser.

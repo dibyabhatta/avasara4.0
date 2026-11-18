@@ -1,0 +1,7 @@
+.av-source-directory{margin:18px 0 24px;padding:18px;border:1px solid #b8c8bf;border-radius:12px}
+.av-source-directory>label{font-weight:700;display:block;margin-bottom:8px}
+.av-source-directory select{max-width:260px;padding:9px;margin-bottom:12px}
+.av-source-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.av-source-links a{display:flex;flex-direction:column;gap:6px;padding:12px;border:1px solid #b8c8bf;border-radius:8px;text-decoration:none;color:inherit}
+.av-source-links a:hover,.av-source-links a:focus-visible{outline:2px solid #28674d}
+.av-source-links small{opacity:.8;line-height:1.5}

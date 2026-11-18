@@ -121,7 +121,7 @@
       && (!country || opp.country === country)
       && (!funding || opp.funding === funding)
       && (!field || (opp.fieldCategory || opp.field || "").includes(field))
-      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""}`.toLowerCase().includes(query))
+      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""} ${(opp.majors || []).join(" ")} ${(opp.discoverySubjects || []).join(" ")} ${opp.institution || ""} ${opp.fundingSource || ""}`.toLowerCase().includes(query))
       && !($("#hide").checked && checkEligibility(opp).status === "no");
   }
 
@@ -130,10 +130,12 @@
       ? (opp.deadline ? `<p class="note"><b>Deadline (as submitted):</b> ${opp.deadline}</p>` : "")
       : (timing[opp.name] ? `<p class="note"><b>Timing:</b> ${timing[opp.name]}</p>` : "");
     return `<div class="card">
-      <div class="tags"><span>${opp.type}</span><span>${opp.levels.map((l) => LEVELS[l]).join(" · ")}</span><span>${opp.country}</span><span>${opp.funding}</span>${opp.field ? `<span>${escapeHtml(opp.field)}</span>` : ""}${opp.fieldCategory ? `<span>${escapeHtml(opp.fieldCategory)}</span>` : ""}</div>
+      <div class="tags"><span>${opp.type}</span><span>${opp.levels.map((l) => LEVELS[l]).join(" · ")}</span><span>${opp.country}</span><span>${opp.funding}</span>${opp.field ? `<span>${escapeHtml(opp.field)}</span>` : ""}${opp.fieldCategory ? `<span>${escapeHtml(opp.fieldCategory)}</span>` : ""}${opp.fundingSource ? `<span>${escapeHtml(opp.fundingSource)}</span>` : ""}</div>
       ${badgeHtml(opp)}
       <h3>${escapeHtml(opp.name)}</h3>
       ${note}
+      ${opp.majors?.length ? `<p class="note"><b>Eligible majors / fields:</b> ${escapeHtml(opp.majors.join(", "))}${opp.majorEligibilityStatus !== "verified" ? " (verify official requirements)" : ""}</p>` : ""}
+      ${opp.deadline ? `<p class="note"><b>Published deadline:</b> ${escapeHtml(opp.deadline)}${opp.deadlineTime ? " · " + escapeHtml(opp.deadlineTime) : ""}</p>` : `<p class="note"><b>Deadline:</b> Not recorded — check official source</p>`}
       ${keyDetailsHtml(opp)}
       <div class="row">
         <a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a>

@@ -1,0 +1,17 @@
+[
+ {"name":"Wageningen University & Research vacancies","country":"Netherlands","category":"University jobs","url":"https://www.wur.nl/en/jobs/jobs-wageningen-university-research","mode":"link_only","notes":"Enable a supported feed/API only after confirming terms and endpoint."},
+ {"name":"Australian National University jobs","country":"Australia","category":"University jobs","url":"https://jobs.anu.edu.au/jobs/search","mode":"link_only"},
+ {"name":"CSIRO careers","country":"Australia","category":"National research institute","url":"https://jobs.csiro.au/","mode":"link_only"},
+ {"name":"EURAXESS research jobs","country":"Europe","category":"Research jobs network","url":"https://euraxess.ec.europa.eu/jobs/search","mode":"link_only"},
+ {"name":"Australian Research Training Program","country":"Australia","category":"Government scholarships","url":"https://www.education.gov.au/research-block-grants/research-training-program","mode":"link_only"},
+ {"name":"National Research Council Canada careers","country":"Canada","category":"National research institute","url":"https://nrc.canada.ca/en/corporate/careers","mode":"link_only"},
+ {"name":"DAAD scholarship database","country":"Germany","category":"Government scholarships","url":"https://www.daad.de/en/studying-in-germany/scholarships/daad-scholarship-database/","mode":"link_only"},
+ {"name":"Max Planck Society careers","country":"Germany","category":"Research institutes","url":"https://www.mpg.de/career","mode":"link_only"},
+ {"name":"UK academic jobs","country":"United Kingdom","category":"Academic jobs portal","url":"https://www.jobs.ac.uk/","mode":"link_only"},
+ {"name":"US NSF funding opportunities","country":"United States","category":"Government research funding","url":"https://www.nsf.gov/funding/opportunities","mode":"link_only"},
+ {"name":"Fulbright foreign student program","country":"United States / Global","category":"Government scholarships","url":"https://foreign.fulbrightonline.org/","mode":"link_only"},
+ {"name":"Erasmus Mundus Joint Masters","country":"Europe / Global","category":"International scholarships","url":"https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters","mode":"link_only"},
+ {"name":"MEXT scholarships","country":"Japan","category":"Government scholarships","url":"https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/","mode":"link_only"},
+ {"name":"GKS scholarships","country":"South Korea","category":"Government scholarships","url":"https://www.studyinkorea.go.kr/en/plan/scholarship.do","mode":"link_only"},
+ {"name":"Mastercard Foundation Scholars Program","country":"Global","category":"Foundation scholarships","url":"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/","mode":"link_only"}
+]
