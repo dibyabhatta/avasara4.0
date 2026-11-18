@@ -726,13 +726,13 @@ a.card:hover { border-color: var(--gold); }
 }
 
 .founder-photo {
-  display: block;
-  width: 100%;
-  max-width: 230px;
-  height: 280px;
+  width: 125px;
+  height: 150px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
+  object-position: center top;
+  border-radius: 8px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .founder-name {
@@ -780,9 +780,10 @@ a.card:hover { border-color: var(--gold); }
 }
 
 @media (max-width: 700px) {
-  .founder-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .founder-photo {
+    width: 110px;
+    height: 130px;
+  
   }
 
   .founder-sidebar {
