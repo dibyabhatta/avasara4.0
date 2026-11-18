@@ -323,34 +323,9 @@ h2 {
   overflow-x: auto;
 }
 
-.about {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 40px;
-  align-items: start;
-}
 
-.big {
-  width: 124px;
-  height: 124px;
-  border: 1.5px solid var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: #7b5a30;
-  color: #f6efe0;
-  font: 500 34px/1 'Poppins',sans-serif;
-  padding-top: 4px;
-}
 
-.about p {
-  max-width: 760px;
-}
 
-.quote {
-  font: 500 19px 'Playfair Display', Georgia, serif;
-  color: var(--gold);
-}
 
 .cta {
   background: var(--sand);
@@ -361,6 +336,15 @@ h2 {
   flex-wrap: wrap;
   max-width: none;
   padding: 60px 6vw;
+}
+
+/* "Know an opportunity?" band: text can shrink so the button stays on the same row */
+.cta p {
+  flex: 1 1 280px;
+}
+
+.cta .btn {
+  flex: none;
 }
 
 footer {
@@ -677,9 +661,6 @@ footer a {
 }
 
 @media (max-width:700px) {
-  .about {
-    grid-template-columns: 1fr;
-  }
   nav {
     order: 3;
     flex: 1 0 100%;
@@ -708,14 +689,11 @@ a.card:hover { border-color: var(--gold); }
 @media (max-width: 900px) { .tk > div:first-child, #cvprev { max-height: none; } }
 @media print { #cvprev { max-height: none !important; overflow: visible !important; } }
 
+/* Let the toolkit columns shrink on small screens instead of overflowing */
+.tk > div { min-width: 0; }
+@media (max-width: 900px) { .tk { grid-template-columns: minmax(0, 1fr); } }
 
-/* Founder section — final layout */
-
-
-/* =====================================
-   AVASARA — FOUNDER SECTION
-===================================== */
-
+/* ---------- About: founder section ---------- */
 .founder-layout {
   display: grid;
   grid-template-columns: 190px minmax(0, 720px);
@@ -737,12 +715,9 @@ a.card:hover { border-color: var(--gold); }
   object-fit: cover;
   object-position: center 25%;
   border-radius: 8px;
-  flex-shrink: 0;
 }
 
 .founder-name {
-  color: var(--ink);
-  font-family: 'Playfair Display', Georgia, serif;
   font-size: 23px;
   margin: 16px 0 4px;
 }
@@ -750,11 +725,6 @@ a.card:hover { border-color: var(--gold); }
 .founder-role {
   font-size: 13px;
   margin: 0;
-  color: var(--tx);
-}
-
-.founder-sidebar .btn {
-  margin-top: 18px;
 }
 
 .founder-story h2 {
@@ -766,7 +736,7 @@ a.card:hover { border-color: var(--gold); }
   font-size: 22px;
   line-height: 1.5;
   color: var(--ink);
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 }
 
 .founder-story > p {
@@ -786,23 +756,22 @@ a.card:hover { border-color: var(--gold); }
 
 .founder-signoff {
   color: var(--ink);
+  font-weight: 700;
 }
 
+/* Personal guidance: sits under the story, left-aligned with the text */
 .founder-contact {
-  margin-top: 25px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
   text-align: left;
 }
 
 .founder-contact p {
   max-width: 600px;
-  margin-bottom: 15px;
+  margin: 0 0 14px;
+  line-height: 1.7;
 }
-
-.founder-contact .btn {
-  display: inline-block;
-}
-
-/* Mobile layout */
 
 @media (max-width: 700px) {
   .founder-layout {
@@ -810,22 +779,17 @@ a.card:hover { border-color: var(--gold); }
     gap: 25px;
     padding: 20px 0 35px;
   }
-
   .founder-sidebar {
     position: static;
   }
-
   .founder-photo {
     width: 115px;
     height: 140px;
   }
-
   .founder-name {
     font-size: 21px;
   }
-
   .founder-lead {
     font-size: 20px;
   }
 }
-
