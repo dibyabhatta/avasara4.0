@@ -90,3 +90,11 @@ This example is documentation only, not an actual scholarship. **Never mark `rev
 On GitHub, Actions must be enabled and workflow permissions must allow **Read and write** access (`Settings → Actions → General → Workflow permissions`). Branch protection may require a pull-request-based commit workflow instead. GitHub Pages should deploy from `main` root. Local `file://` opening still shows the existing curated database, but browser fetches of automation JSON require GitHub Pages or a local HTTP server.
 
 No private credentials are embedded in the website. Social submissions remain manual and moderated. Existing tracker records remain in each visitor's local browser.
+
+## CV and résumé studio
+
+Open **Toolkit → CV builder** and choose one of six visual styles (Academic Research, Australian Professional, US Résumé, UK Graduate, European Minimal, Scholarship Student). Enter information in the existing CV form to update the live preview; use **Print / Save PDF** to export. No Word download or account is required. Information is stored in the visitor's browser; the selected style is also saved locally. Follow each programme's prescribed format when required. Existing Word template files remain in the repository as legacy resources but are no longer required by the CV studio.
+
+## Acknowledgements
+
+AVASARA is an independent project created and maintained by Dibya Bhatta. The original website design was developed with the assistance of **Claude (Anthropic)**. Subsequent development, feature enhancements, and technical improvements have been supported by **ChatGPT (OpenAI)**. Both AI tools were used under the direction of the project creator. AVASARA is not affiliated with or endorsed by OpenAI or Anthropic.

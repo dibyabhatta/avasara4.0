@@ -167,7 +167,7 @@
   function keyDetailsHtml(opp) {
     if (opp.community) return communityDetailsHtml(opp);
     const extra = details[opp.name] || {};
-    const correction = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Avasara update: " + opp.name)}`;
+    const correction = `https://github.com/dibyabhatta/avasara4.0/issues/new?title=${encodeURIComponent("Opportunity correction: " + opp.name)}&body=${encodeURIComponent("Official URL: " + opp.url + "\n\nWhat is incorrect?\n\nOfficial evidence URL:\n\nPlease avoid sharing personal information.")}`;
     const row = (label, value) => `<dt>${label}</dt><dd>${value}</dd>`;
     return `<details class="kd"><summary>Key details</summary><dl>
       ${row("Level", opp.levels.map((l) => LEVELS[l]).join(", "))}
@@ -178,7 +178,7 @@
       ${row("Eligibility", eligibilityText(opp))}
       ${row("How to apply", extra.apply || "Follow the instructions on the official page")}
       ${row("Value", "See the official page")}
-      ${row("Update", `<a href="${correction}">Report a correction</a>`)}
+      ${row("Update", `<a href="${correction}" target="_blank" rel="noopener">Report a correction</a>`)}
     </dl></details>`;
   }
 
@@ -203,6 +203,19 @@
       <td><textarea rows="2" data-i="${index}" data-field="notes">${escapeHtml(item.notes)}</textarea></td>
       <td><button class="btn" data-remove="${index}">✕</button></td>
     </tr>`;
+  }
+
+  function exportTrackerCalendar() {
+    const esc = (s) => String(s || "").replace(/\\/g, "\\\\").replace(/\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;");
+    const events = tracked.filter(t => /^\d{4}-\d{2}-\d{2}$/.test(t.deadline || "")).map((t, i) => {
+      const date = t.deadline.replace(/-/g, "");
+      const end = new Date(`${t.deadline}T12:00:00Z`); end.setUTCDate(end.getUTCDate() + 1);
+      const next = end.toISOString().slice(0, 10).replace(/-/g, "");
+      return ["BEGIN:VEVENT", `UID:avasara-${i}-${date}@avasara`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "")}`, `DTSTART;VALUE=DATE:${date}`, `DTEND;VALUE=DATE:${next}`, `SUMMARY:${esc(t.name)} application deadline`, `DESCRIPTION:${esc("AVASARA tracker. Confirm deadline and time zone on the official source.")}`, "BEGIN:VALARM", "TRIGGER:-P7D", "ACTION:DISPLAY", "DESCRIPTION:Application deadline in 7 days", "END:VALARM", "END:VEVENT"].join("\r\n");
+    });
+    if (!events.length) { alert("Add a deadline to Tracker before exporting a calendar."); return; }
+    const blob = new Blob(["BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//AVASARA//Tracker//EN\r\n" + events.join("\r\n") + "\r\nEND:VCALENDAR\r\n"], {type:"text/calendar;charset=utf-8"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "avasara-deadlines.ics"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
   function renderTracker() {
@@ -371,6 +384,7 @@
       updateClosingSoon();
     });
     $("#exp").onclick = exportTrackerCsv;
+    $("#expics")?.addEventListener("click", exportTrackerCalendar);
     $("#th").onclick = toggleTheme;
   }
 
@@ -413,7 +427,7 @@
   }
 
   function communityDetailsHtml(opp) {
-    const correction = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Avasara update: " + opp.name)}`;
+    const correction = `https://github.com/dibyabhatta/avasara4.0/issues/new?title=${encodeURIComponent("Opportunity correction: " + opp.name)}&body=${encodeURIComponent("Official URL: " + opp.url + "\n\nWhat is incorrect?\n\nOfficial evidence URL:\n\nPlease avoid sharing personal information.")}`;
     const row = (label, value) => (value ? `<dt>${label}</dt><dd>${value}</dd>` : "");
     return `<details class="kd"><summary>Key details</summary><dl>
       ${row("Level", opp.levels.map((l) => LEVELS[l]).join(", "))}
@@ -425,7 +439,7 @@
       ${row("Eligibility", opp.eligibility ? opp.eligibility + " (as submitted)" : "")}
       ${row("About", opp.description)}
       ${row("How to apply", "Follow the instructions on the official page")}
-      ${row("Update", `<a href="${correction}">Report a correction</a>`)}
+      ${row("Update", `<a href="${correction}" target="_blank" rel="noopener">Report a correction</a>`)}
     </dl></details>`;
   }
 

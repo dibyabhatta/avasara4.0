@@ -1,17 +1,835 @@
 [
- {"name":"Wageningen University & Research vacancies","country":"Netherlands","category":"University jobs","url":"https://www.wur.nl/en/jobs/jobs-wageningen-university-research","mode":"link_only","notes":"Enable a supported feed/API only after confirming terms and endpoint."},
- {"name":"Australian National University jobs","country":"Australia","category":"University jobs","url":"https://jobs.anu.edu.au/jobs/search","mode":"link_only"},
- {"name":"CSIRO careers","country":"Australia","category":"National research institute","url":"https://jobs.csiro.au/","mode":"link_only"},
- {"name":"EURAXESS research jobs","country":"Europe","category":"Research jobs network","url":"https://euraxess.ec.europa.eu/jobs/search","mode":"link_only"},
- {"name":"Australian Research Training Program","country":"Australia","category":"Government scholarships","url":"https://www.education.gov.au/research-block-grants/research-training-program","mode":"link_only"},
- {"name":"National Research Council Canada careers","country":"Canada","category":"National research institute","url":"https://nrc.canada.ca/en/corporate/careers","mode":"link_only"},
- {"name":"DAAD scholarship database","country":"Germany","category":"Government scholarships","url":"https://www.daad.de/en/studying-in-germany/scholarships/daad-scholarship-database/","mode":"link_only"},
- {"name":"Max Planck Society careers","country":"Germany","category":"Research institutes","url":"https://www.mpg.de/career","mode":"link_only"},
- {"name":"UK academic jobs","country":"United Kingdom","category":"Academic jobs portal","url":"https://www.jobs.ac.uk/","mode":"link_only"},
- {"name":"US NSF funding opportunities","country":"United States","category":"Government research funding","url":"https://www.nsf.gov/funding/opportunities","mode":"link_only"},
- {"name":"Fulbright foreign student program","country":"United States / Global","category":"Government scholarships","url":"https://foreign.fulbrightonline.org/","mode":"link_only"},
- {"name":"Erasmus Mundus Joint Masters","country":"Europe / Global","category":"International scholarships","url":"https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters","mode":"link_only"},
- {"name":"MEXT scholarships","country":"Japan","category":"Government scholarships","url":"https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/","mode":"link_only"},
- {"name":"GKS scholarships","country":"South Korea","category":"Government scholarships","url":"https://www.studyinkorea.go.kr/en/plan/scholarship.do","mode":"link_only"},
- {"name":"Mastercard Foundation Scholars Program","country":"Global","category":"Foundation scholarships","url":"https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/","mode":"link_only"}
+  {
+    "name": "Wageningen University & Research vacancies",
+    "country": "Netherlands",
+    "category": "University jobs",
+    "url": "https://www.wur.nl/en/jobs/jobs-wageningen-university-research",
+    "mode": "link_only",
+    "notes": "Enable a supported feed/API only after confirming terms and endpoint.",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Australian National University jobs",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://jobs.anu.edu.au/jobs/search",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "CSIRO careers",
+    "country": "Australia",
+    "category": "National research institute",
+    "url": "https://jobs.csiro.au/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "EURAXESS research jobs",
+    "country": "Europe",
+    "category": "Research jobs network",
+    "url": "https://euraxess.ec.europa.eu/jobs/search",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Australian Research Training Program",
+    "country": "Australia",
+    "category": "Government scholarships",
+    "url": "https://www.education.gov.au/research-block-grants/research-training-program",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "National Research Council Canada careers",
+    "country": "Canada",
+    "category": "National research institute",
+    "url": "https://nrc.canada.ca/en/corporate/careers",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "DAAD scholarship database",
+    "country": "Germany",
+    "category": "Government scholarships",
+    "url": "https://www.daad.de/en/studying-in-germany/scholarships/daad-scholarship-database/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Max Planck Society careers",
+    "country": "Germany",
+    "category": "Research institutes",
+    "url": "https://www.mpg.de/career",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "UK academic jobs",
+    "country": "United Kingdom",
+    "category": "Academic jobs portal",
+    "url": "https://www.jobs.ac.uk/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "US NSF funding opportunities",
+    "country": "United States",
+    "category": "Government research funding",
+    "url": "https://www.nsf.gov/funding/opportunities",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Fulbright foreign student program",
+    "country": "United States / Global",
+    "category": "Government scholarships",
+    "url": "https://foreign.fulbrightonline.org/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Erasmus Mundus Joint Masters",
+    "country": "Europe / Global",
+    "category": "International scholarships",
+    "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "MEXT scholarships",
+    "country": "Japan",
+    "category": "Government scholarships",
+    "url": "https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "GKS scholarships",
+    "country": "South Korea",
+    "category": "Government scholarships",
+    "url": "https://www.studyinkorea.go.kr/en/plan/scholarship.do",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "Mastercard Foundation Scholars Program",
+    "country": "Global",
+    "category": "Foundation scholarships",
+    "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed"
+  },
+  {
+    "name": "University of Melbourne careers",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://jobs.unimelb.edu.au/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Sydney careers",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://jobs.sydney.edu.au/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "UNSW careers",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://www.unsw.edu.au/jobs",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Monash University jobs",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://careers.monash.edu/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Queensland careers",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://careers.uq.edu.au/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Adelaide careers",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://www.adelaide.edu.au/jobs/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Western Australia jobs",
+    "country": "Australia",
+    "category": "University jobs",
+    "url": "https://www.jobs.uwa.edu.au/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Study Australia scholarships",
+    "country": "Australia",
+    "category": "Government scholarships",
+    "url": "https://www.studyaustralia.gov.au/en/plan-your-studies/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Australian Institute of Marine Science careers",
+    "country": "Australia",
+    "category": "Research institutes",
+    "url": "https://www.aims.gov.au/about/careers",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Manaaki New Zealand Scholarships",
+    "country": "New Zealand",
+    "category": "Government scholarships",
+    "url": "https://www.nzscholarships.govt.nz/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Auckland scholarships",
+    "country": "New Zealand",
+    "category": "University funding",
+    "url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards.html",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Otago scholarships",
+    "country": "New Zealand",
+    "category": "University funding",
+    "url": "https://www.otago.ac.nz/study/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Chevening Scholarships",
+    "country": "United Kingdom",
+    "category": "Government scholarships",
+    "url": "https://www.chevening.org/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Commonwealth Scholarship Commission",
+    "country": "United Kingdom",
+    "category": "Government scholarships",
+    "url": "https://cscuk.fcdo.gov.uk/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "UK Research and Innovation",
+    "country": "United Kingdom",
+    "category": "Research funding",
+    "url": "https://www.ukri.org/opportunity/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Oxford Graduate Scholarships",
+    "country": "United Kingdom",
+    "category": "University funding",
+    "url": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Cambridge Postgraduate Funding",
+    "country": "United Kingdom",
+    "category": "University funding",
+    "url": "https://www.postgraduate.study.cam.ac.uk/funding",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Helmholtz Association careers",
+    "country": "Germany",
+    "category": "Research institutes",
+    "url": "https://www.helmholtz.de/en/career/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Leibniz Association careers",
+    "country": "Germany",
+    "category": "Research institutes",
+    "url": "https://www.leibniz-gemeinschaft.de/en/careers",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "EMBL jobs",
+    "country": "Germany",
+    "category": "Research institutes",
+    "url": "https://www.embl.org/jobs/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Fraunhofer careers",
+    "country": "Germany",
+    "category": "Research institutes",
+    "url": "https://www.fraunhofer.de/en/jobs-and-career.html",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "AcademicTransfer",
+    "country": "Netherlands",
+    "category": "Academic jobs",
+    "url": "https://www.academictransfer.com/en/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Groningen scholarships",
+    "country": "Netherlands",
+    "category": "University funding",
+    "url": "https://www.rug.nl/education/scholarships/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Maastricht University scholarships",
+    "country": "Netherlands",
+    "category": "University funding",
+    "url": "https://www.maastrichtuniversity.nl/support/during-your-studies/money-matters/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Swedish Institute scholarships",
+    "country": "Sweden",
+    "category": "Government scholarships",
+    "url": "https://si.se/en/apply/scholarships/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Lund University scholarships",
+    "country": "Sweden",
+    "category": "University funding",
+    "url": "https://www.lunduniversity.lu.se/admissions/bachelors-and-masters-studies/scholarships-and-awards",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Copenhagen job portal",
+    "country": "Denmark",
+    "category": "University jobs",
+    "url": "https://employment.ku.dk/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Aarhus University vacancies",
+    "country": "Denmark",
+    "category": "University jobs",
+    "url": "https://international.au.dk/about/profile/vacant-positions",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Helsinki open positions",
+    "country": "Finland",
+    "category": "University jobs",
+    "url": "https://www.helsinki.fi/en/about-us/careers/open-positions",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Study in Finland scholarships",
+    "country": "Finland",
+    "category": "University funding",
+    "url": "https://www.studyinfinland.fi/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "ETH Zurich jobs",
+    "country": "Switzerland",
+    "category": "University jobs",
+    "url": "https://jobs.ethz.ch/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "EPFL careers",
+    "country": "Switzerland",
+    "category": "University jobs",
+    "url": "https://www.epfl.ch/about/working/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Swiss National Science Foundation",
+    "country": "Switzerland",
+    "category": "Research funding",
+    "url": "https://www.snf.ch/en",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Campus France scholarships",
+    "country": "France",
+    "category": "Government scholarships",
+    "url": "https://campusbourses.campusfrance.org/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "CNRS jobs",
+    "country": "France",
+    "category": "Research institutes",
+    "url": "https://emploi.cnrs.fr/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "INRAE careers",
+    "country": "France",
+    "category": "Research institutes",
+    "url": "https://jobs.inrae.fr/en",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "FWO Flanders",
+    "country": "Belgium",
+    "category": "Research funding",
+    "url": "https://www.fwo.be/en/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Austrian Science Fund FWF",
+    "country": "Austria",
+    "category": "Research funding",
+    "url": "https://www.fwf.ac.at/en/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Bologna job opportunities",
+    "country": "Italy",
+    "category": "University jobs",
+    "url": "https://www.unibo.it/en/university/work-with-us",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Erasmus+ opportunities",
+    "country": "Europe",
+    "category": "International scholarships",
+    "url": "https://erasmus-plus.ec.europa.eu/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Marie Skłodowska-Curie Actions",
+    "country": "Europe",
+    "category": "Research funding",
+    "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Fulbright Program",
+    "country": "United States",
+    "category": "Government scholarships",
+    "url": "https://fulbrightprogram.org/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Grants.gov",
+    "country": "United States",
+    "category": "Government funding",
+    "url": "https://www.grants.gov/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "NIH funding opportunities",
+    "country": "United States",
+    "category": "Research funding",
+    "url": "https://grants.nih.gov/funding",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "US Department of Energy national laboratories",
+    "country": "United States",
+    "category": "Research institutes",
+    "url": "https://www.energy.gov/science/national-laboratories",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Stanford Graduate Funding",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://gradadmissions.stanford.edu/admitted-students/funding-graduate-study",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Princeton Graduate Financial Support",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://gradschool.princeton.edu/financial-support",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Harvard Griffin GSAS funding",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://gsas.harvard.edu/financial-support",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "MIT Graduate Funding",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://oge.mit.edu/finances/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Yale Graduate Funding",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://gsas.yale.edu/resources-students/finances-fellowships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Knight-Hennessy Scholars",
+    "country": "United States",
+    "category": "University funding",
+    "url": "https://knight-hennessy.stanford.edu/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "EduCanada scholarships",
+    "country": "Canada",
+    "category": "Government scholarships",
+    "url": "https://www.educanada.ca/scholarships-bourses/index.aspx?lang=eng",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "NSERC funding",
+    "country": "Canada",
+    "category": "Research funding",
+    "url": "https://www.nserc-crsng.gc.ca/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "CIHR funding",
+    "country": "Canada",
+    "category": "Research funding",
+    "url": "https://cihr-irsc.gc.ca/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Toronto graduate funding",
+    "country": "Canada",
+    "category": "University funding",
+    "url": "https://www.sgs.utoronto.ca/awards-funding/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "UBC graduate awards",
+    "country": "Canada",
+    "category": "University funding",
+    "url": "https://www.grad.ubc.ca/scholarships-awards-funding",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "RIKEN careers",
+    "country": "Japan",
+    "category": "Research institutes",
+    "url": "https://www.riken.jp/en/careers/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "OIST Research Internship",
+    "country": "Japan",
+    "category": "Research internships",
+    "url": "https://www.oist.jp/admissions/research-internship",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "KAIST admissions",
+    "country": "South Korea",
+    "category": "Research institutes",
+    "url": "https://admission.kaist.ac.kr/intl-graduate/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "China Scholarship Council",
+    "country": "China",
+    "category": "Government scholarships",
+    "url": "https://www.csc.edu.cn/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "A*STAR scholarships",
+    "country": "Singapore",
+    "category": "Research institutes",
+    "url": "https://www.a-star.edu.sg/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "NUS Graduate School scholarships",
+    "country": "Singapore",
+    "category": "University funding",
+    "url": "https://nusgs.nus.edu.sg/scholarships/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "NTU Graduate Scholarships",
+    "country": "Singapore",
+    "category": "University funding",
+    "url": "https://www.ntu.edu.sg/admissions/graduate/financialmatters/scholarships",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Study in India",
+    "country": "India",
+    "category": "Government scholarships",
+    "url": "https://studyinindia.gov.in/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "IISc opportunities",
+    "country": "India",
+    "category": "Research institutes",
+    "url": "https://iisc.ac.in/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Taiwan Scholarship",
+    "country": "Taiwan",
+    "category": "Government scholarships",
+    "url": "https://taiwanscholarship.moe.gov.tw/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Hong Kong PhD Fellowship Scheme",
+    "country": "Hong Kong",
+    "category": "Government scholarships",
+    "url": "https://cerg1.ugc.edu.hk/hkpfs/index.html",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "KAUST admissions and funding",
+    "country": "Saudi Arabia",
+    "category": "University funding",
+    "url": "https://admissions.kaust.edu.sa/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Qatar University scholarships",
+    "country": "Qatar",
+    "category": "University funding",
+    "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/Pages/default.aspx",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Khalifa University graduate admissions",
+    "country": "United Arab Emirates",
+    "category": "University funding",
+    "url": "https://www.ku.ac.ae/graduate-admissions",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "MBZUAI admissions",
+    "country": "United Arab Emirates",
+    "category": "University funding",
+    "url": "https://mbzuai.ac.ae/study/admission-process/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "National Research Foundation South Africa",
+    "country": "South Africa",
+    "category": "Research funding",
+    "url": "https://www.nrf.ac.za/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "University of Cape Town postgraduate funding",
+    "country": "South Africa",
+    "category": "University funding",
+    "url": "https://www.uct.ac.za/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Mastercard Foundation Scholars Program",
+    "country": "Africa",
+    "category": "Foundation scholarships",
+    "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "CAPES Brazil",
+    "country": "Brazil",
+    "category": "Government scholarships",
+    "url": "https://www.gov.br/capes/pt-br",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "CNPq Brazil",
+    "country": "Brazil",
+    "category": "Research funding",
+    "url": "https://www.gov.br/cnpq/pt-br",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "SECIHTI Mexico",
+    "country": "Mexico",
+    "category": "Government scholarships",
+    "url": "https://secihti.mx/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "ANID Chile",
+    "country": "Chile",
+    "category": "Government scholarships",
+    "url": "https://anid.cl/",
+    "mode": "link_only",
+    "permissionStatus": "not_assessed",
+    "notes": "Official source directory entry; verify current page, terms and any machine-readable feed before enabling imports."
+  },
+  {
+    "name": "Grants.gov public opportunities API — research discovery",
+    "country": "United States",
+    "category": "Government grants",
+    "url": "https://www.grants.gov/api",
+    "mode": "grants_gov",
+    "keyword": "research",
+    "permissionStatus": "public_documented_api",
+    "notes": "Official public search2 API. Institutional grants are not automatically student scholarships. Human review mandatory; check API terms and rate limits."
+  }
 ]

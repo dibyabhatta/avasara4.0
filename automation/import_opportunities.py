@@ -68,6 +68,33 @@ def discover(source):
                 if l is not None: link=l.get('href','')
             if clean_url(link) and title.strip(): result.append({'name':title.strip()[:200],'url':clean_url(link),'sourcePortal':source['name'],'reviewed':False,'reason':'Confirm official posting, deadline, eligibility, funding and subject majors'})
         return result[:200]
+    if mode == 'grants_gov':
+        # Public documented US federal opportunities API. Discovery only: most grants
+        # are NOT individual student scholarships and require eligibility review.
+        req = urllib.request.Request(
+            'https://api.grants.gov/v1/api/search2',
+            data=json.dumps({'rows':100,'oppStatuses':'posted','keyword':source.get('keyword','research')}).encode(),
+            headers={'Content-Type':'application/json','User-Agent':'AVASARA-Opportunity-Discovery/1.0'},
+            method='POST')
+        with urllib.request.urlopen(req,timeout=25) as response:
+            payload=json.load(response)
+        hits=payload.get('data',{}).get('oppHits',[])
+        results=[]
+        for hit in hits:
+            number=str(hit.get('number','')).strip()
+            title=str(hit.get('title','')).strip()
+            if not number or not title: continue
+            results.append({
+                'name':title[:200],
+                'url':'https://www.grants.gov/search-results-detail/'+str(hit.get('id')),
+                'sourcePortal':source['name'],
+                'externalId':number,
+                'agency':hit.get('agencyName',''),
+                'sourceCloseDate':hit.get('closeDate',''),
+                'reviewed':False,
+                'reason':'US federal grant; check whether individuals/students are eligible, verify official URL, academic relevance, deadline, funding and subjects. Do not assume scholarship eligibility.'
+            })
+        return results
     if mode == 'greenhouse':
         token=source.get('board_token','')
         if not re.fullmatch(r'[A-Za-z0-9_-]{2,80}',token): return []
@@ -92,12 +119,15 @@ def main():
             if not isinstance(rows,list): raise ValueError('Expected JSON array')
             for raw in rows:
                 valid=validate(raw)
-                if valid and raw.get('reviewed') is True and raw.get('officialSourceConfirmed') is True:
+                if valid and raw.get('reviewed') is True and raw.get('officialSourceConfirmed') is True and raw.get('verifiedOn') and raw.get('verificationNotes') and raw.get('verifiedBy'):
                     valid['reviewedOn']=str(raw.get('reviewedOn') or today)
+                    valid['verificationStatus']='human-reviewed'
+                    valid['verifiedBy']=str(raw['verifiedBy'])[:100]
+                    valid['verificationNotes']=str(raw['verificationNotes'])[:500]
                     published[valid['id']]=valid
                     pending.pop(valid['id'],None)
                 elif isinstance(raw,dict) and clean_url(raw.get('url')):
-                    pending[ident(raw)]={**raw,'reason':'Needs human review and officialSourceConfirmed=true'}
+                    pending[ident(raw)]={**raw,'reason':'Needs human review: officialSourceConfirmed=true, verifiedOn, verifiedBy, verificationNotes and reviewed=true required'}
         except Exception as e: errors.append({'source':str(path.relative_to(ROOT)),'error':str(e)[:250]})
     # Retain reviewed records across runs. Expired records are archived, not deleted.
     previous_archive=json.loads((ROOT/'automation/archived-opportunities.json').read_text()) if (ROOT/'automation/archived-opportunities.json').exists() else []

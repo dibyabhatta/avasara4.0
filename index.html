@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Scholarships, summer schools, internships and research programs worldwide, linked to official sources.">
-<meta name="theme-color" content="#1f3a33">
-<meta property="og:title" content="Avasara — Find your opportunity">
-<meta property="og:description" content="Scholarships, summer schools, internships and research programs worldwide, linked to official sources.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2750%27 fill=%27%23d4b06a%27/%3E%3Ctext x=%2750%27 y=%2770%27 font-size=%2765%27 text-anchor=%27middle%27 fill=%27%231f3a33%27 font-weight=%27bold%27%3E%E0%A4%85%3C/text%3E%3C/svg%3E">
+
+<html lang="en"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Scholarships, summer schools, internships and research programs worldwide, linked to official sources." name="description"/>
+<meta content="#1f3a33" name="theme-color"/>
+<meta content="Avasara — Find your opportunity" property="og:title"/>
+<meta content="Scholarships, summer schools, internships and research programs worldwide, linked to official sources." property="og:description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2750%27 fill=%27%23d4b06a%27/%3E%3Ctext x=%2750%27 y=%2770%27 font-size=%2765%27 text-anchor=%27middle%27 fill=%27%231f3a33%27 font-weight=%27bold%27%3E%E0%A4%85%3C/text%3E%3C/svg%3E" rel="icon"/>
 <title>Avasara — Find your opportunity</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@500;700&display=swap">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="discovery-upgrade.css"></head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;family=Poppins:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/><link href="discovery-upgrade.css" rel="stylesheet"/></head>
 <body data-page="home">
 <script>
 /*
@@ -24,6 +25,7 @@
     ["#tracker", "Tracker 2.0", "tracker"],
     ["#toolkit", "Toolkit", "toolkit"],
     ["#academy", "Academy", "academy"],
+    ["#community", "Community", "community"],
     ["#about", "About", "about"],
   ];
   const current = document.body.dataset.page;
@@ -46,10 +48,10 @@
 </script>
 <div data-view="home">
 <section><div class="eyebrow">Global opportunity, made findable</div>
-<h1>Your next chapter<br><em>starts with a chance.</em></h1>
+<h1>Your next chapter<br/><em>starts with a chance.</em></h1>
 <p style="max-width:620px;font-size:18px">Scholarships, summer schools, internships and research programs for Bachelor, Master and PhD students worldwide, each linked to its official source.</p>
-<form id="hform" class="hero-search" role="search"><input id="hq" type="search" placeholder="Search by scholarship, country or field…" aria-label="Search opportunities"><button class="btn dk" type="submit">Search ↗</button></form>
-<div class="chips" aria-label="Quick filters">
+<form class="hero-search" id="hform" role="search"><input aria-label="Search opportunities" id="hq" placeholder="Search by scholarship, country or field…" type="search"/><button class="btn dk" type="submit">Search ↗</button></form>
+<div aria-label="Quick filters" class="chips">
 <button class="chip" data-filter='{"level":"B"}'>Bachelor</button>
 <button class="chip" data-filter='{"level":"M"}'>Master</button>
 <button class="chip" data-filter='{"level":"P"}'>PhD</button>
@@ -58,7 +60,7 @@
 <button class="chip" data-filter='{"funding":"Fully funded"}'>Fully funded</button>
 <button class="chip" data-filter='{"open":"1"}'>Open around now</button>
 </div>
-<div class="chips" aria-label="Popular destinations"><span class="note" style="align-self:center">Popular:</span>
+<div aria-label="Popular destinations" class="chips"><span class="note" style="align-self:center">Popular:</span>
 <button class="chip" data-filter='{"country":"Australia"}'>Australia</button>
 <button class="chip" data-filter='{"country":"USA"}'>USA</button>
 <button class="chip" data-filter='{"country":"United Kingdom"}'>United Kingdom</button>
@@ -68,26 +70,22 @@
 <button class="chip" data-filter='{"country":"Nepal"}'>Nepal</button>
 </div>
 <div class="stats"><div><b id="n1">0</b>listings</div><div><b>4</b>opportunity types</div><div><b>3</b>degree levels</div><div><b>Official</b>source-first links</div></div></section>
-
 <section style="padding-top:10px"><div class="eyebrow">How it works</div><h2>Three steps, <em>no guesswork.</em></h2><div class="grid steps">
 <a class="card" href="#scholarships"><span class="num">1</span><h3>Search</h3><p>Filter by level, country, funding and type.</p></a>
 <a class="card" href="scholarships.html#match"><span class="num">2</span><h3>Check eligibility</h3><p>Add your details once and see a badge on every listing.</p></a>
 <a class="card" href="#tracker"><span class="num">3</span><h3>Track</h3><p>Save opportunities, set deadlines and tick off documents.</p></a>
 </div></section>
-
 <section id="soon" style="padding-bottom:20px"><div class="eyebrow">Closing soon</div><h2>Don’t miss <em>these.</em></h2>
 <div id="soonmine"></div>
 <div class="grid" id="soongrid"></div>
 <p id="soonmore" style="margin-top:14px"></p>
 <p class="note">Based on each program’s typical window this month, not official dates. Always confirm on the official page.</p></section>
-
-<section style="padding-top:10px"><div class="teaser"><img class="teaser-photo" src="1O1A9320.jpeg" alt="Dibya Bhatta, founder of Avasara" onerror="this.style.display='none'">
+<section style="padding-top:10px"><div class="teaser"><img alt="Dibya Bhatta, founder of Avasara" class="teaser-photo" onerror="this.style.display='none'" src="1O1A9320.jpeg"/>
 <div><div class="eyebrow">Why Avasara</div><p class="teaser-quote">“Opportunities are everywhere. Finding the right one shouldn't be the hardest part.”</p>
 <p class="note">Dibya Bhatta, founder · PhD researcher at ANU</p><a class="btn" href="#about">Read my story ↗</a></div></div></section>
-<section class="av-importer" id="community-import"><div class="eyebrow">Community discovery</div><h3>Share a scholarship from Facebook, LinkedIn or Bluesky</h3><p class="note">Paste a public post URL and any official scholarship links from its text or comments. AVASARA cannot automatically read restricted comments. Submissions are prepared for your review, not published automatically.</p><label for="av-social-post">Social post URL</label><input id="av-social-post" type="url" placeholder="https://www.facebook.com/... or linkedin.com/... or bsky.app/..."><label for="av-social-links">Official links or copied post/comment text</label><textarea id="av-social-links" rows="4" placeholder="Paste official programme links and any relevant description here"></textarea><button class="btn dk" id="av-social-compose" type="button">Prepare submission email ↗</button><p class="note" id="av-social-note" role="status"></p></section>
-<div class="cta"><h2 style="margin:0">Know an opportunity?<br><em style="font-style:italic">Pass it forward.</em></h2>
+<div class="cta"><h2 style="margin:0">Know an opportunity?<br/><em style="font-style:italic">Pass it forward.</em></h2>
 <p style="max-width:480px">Have an official scholarship announcement, useful resource or correction? Help keep Avasara useful for the next person searching for a chance.</p>
-<a class="btn dk js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Share an opportunity ↗</a></div>
+<a class="btn dk js-submit" href="#community">Visit Community ↗</a></div>
 </div>
 <div data-view="scholarships">
 <section id="board"><div class="eyebrow">Scholarships and programs</div><h2>Find what’s <em>next.</em></h2>
@@ -97,22 +95,22 @@
 <select id="pl2"><option value="">Level applying for…</option><option value="S">Grade 11–12</option><option value="B">Bachelor</option><option value="M">Master</option><option value="P">PhD</option></select>
 <select id="pc"><option value="NP">Currently studying in Nepal</option><option value="OUT">Studying outside Nepal</option></select>
 <select id="pd"><option value="Any">Any field</option><option>Medicine</option><option>Engineering</option><option>Agriculture</option><option>Forestry</option><option>Science</option><option>Business</option><option>Humanities</option><option>IT</option><option>Other</option></select>
-<input id="pa" type="number" min="14" max="80" placeholder="Age" style="width:90px">
+<input id="pa" max="80" min="14" placeholder="Age" style="width:90px" type="number"/>
 <select id="pe"><option value="">English test?</option><option value="yes">Yes (IELTS/TOEFL/PTE)</option><option value="no">Not yet</option></select>
-<label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="hide"> Hide not eligible</label></div>
-<p id="sum" class="note"></p></details>
-<section class="av-subject-panel" aria-labelledby="av-subject-title"><h3 id="av-subject-title">Browse by subject &amp; major</h3><p class="note">Subjects are shown on each listing. <b>Eligible majors</b> are not assumed from programme titles; check official admission rules. Unclassified opportunities remain searchable in “All fields”.</p><div id="av-subject-buttons" class="av-subject-buttons" role="group" aria-label="Choose academic subject"></div><label for="av-major">Specific major or research topic</label><input id="av-major" type="search" placeholder="e.g. Microbiology, forestry, economics" aria-label="Filter by major or research topic"><p id="av-subject-summary" class="note" aria-live="polite"></p></section>
-<section class="av-source-directory" aria-label="Official global research and scholarship portals"><h3>Global university, government &amp; research job portals</h3><p id="av-auto-status" class="note" aria-live="polite">Loading reviewed automated entries and official portal directory…</p><div id="av-source-directory"></div><p class="note">Portal directory entries are discovery links, not verified individual opportunities. Only reviewed individual listings are added to the opportunity cards.</p></section>
-<div class="filters"><input id="q" placeholder="Search name, country, keyword…">
+<label style="display:flex;align-items:center;gap:6px"><input id="hide" type="checkbox"/> Hide not eligible</label></div>
+<p class="note" id="sum"></p></details>
+<section aria-labelledby="av-subject-title" class="av-subject-panel"><h3 id="av-subject-title">Browse by subject &amp; major</h3><p class="note">Subjects are shown on each listing. <b>Eligible majors</b> are not assumed from programme titles; check official admission rules. Unclassified opportunities remain searchable in “All fields”.</p><div aria-label="Choose academic subject" class="av-subject-buttons" id="av-subject-buttons" role="group"></div><label for="av-major">Specific major or research topic</label><input aria-label="Filter by major or research topic" id="av-major" placeholder="e.g. Microbiology, forestry, economics" type="search"/><p aria-live="polite" class="note" id="av-subject-summary"></p></section>
+<section aria-label="Official global research and scholarship portals" class="av-source-directory"><h3>Global university, government &amp; research job portals</h3><p aria-live="polite" class="note" id="av-auto-status">Loading reviewed automated entries and official portal directory…</p><div id="av-source-directory"></div><p class="note">Portal directory entries are discovery links, not verified individual opportunities. Only reviewed individual listings are added to the opportunity cards.</p></section>
+<div class="filters"><input id="q" placeholder="Search name, country, keyword…"/>
 <select id="ft"><option value="">All types</option><option>Scholarship</option><option>Research</option><option>Internship</option><option>Summer school</option><option>Postdoctoral</option><option>Fellowship</option></select>
 <select id="fl"><option value="">All levels</option><option value="S">Grade 11–12</option><option value="B">Bachelor</option><option value="M">Master</option><option value="P">PhD</option></select>
 <select id="fd"><option value="">All destinations</option></select>
-<select id="ffield"><option value="">All fields</option><option>Engineering & Technology</option><option>Computer Science, AI & Data Science</option><option>Medicine & Health</option><option>Biological Sciences & Biotechnology</option><option>Chemistry, Physics & Mathematics</option><option>Environmental Science & Climate</option><option>Agriculture & Food Science</option><option>Business, Economics & Finance</option><option>Law & International Relations</option><option>Social Sciences & Psychology</option><option>Education</option><option>Arts, Humanities & Languages</option><option>Architecture & Design</option><option>Media & Communications</option><option>Public Policy & Development</option></select>
+<select id="ffield"><option value="">All fields</option><option>Engineering &amp; Technology</option><option>Computer Science, AI &amp; Data Science</option><option>Medicine &amp; Health</option><option>Biological Sciences &amp; Biotechnology</option><option>Chemistry, Physics &amp; Mathematics</option><option>Environmental Science &amp; Climate</option><option>Agriculture &amp; Food Science</option><option>Business, Economics &amp; Finance</option><option>Law &amp; International Relations</option><option>Social Sciences &amp; Psychology</option><option>Education</option><option>Arts, Humanities &amp; Languages</option><option>Architecture &amp; Design</option><option>Media &amp; Communications</option><option>Public Policy &amp; Development</option></select>
 <select id="fverified"><option value="">Any verification status</option><option value="verified">Previously recorded deadline</option><option value="unverified">Needs verification</option></select><select id="fdeadline"><option value="">Any deadline</option><option value="7">Within 7 days</option><option value="14">Within 14 days</option><option value="30">Within 30 days</option><option value="60">Within 60 days</option><option value="90">Within 90 days</option></select><select id="ff"><option value="">Any funding</option><option>Fully funded</option><option>Partial</option><option>Paid</option><option>Varies</option></select>
 <select id="fs"><option value="">All sources</option><option value="curated">Curated by Avasara</option><option value="community">Shared by community</option></select>
-<label class="open-now"><input type="checkbox" id="fo"> Open around now</label>
+<label class="open-now"><input id="fo" type="checkbox"/> Open around now</label>
 <button class="btn" id="clr">Clear</button></div>
-<p class="note" id="cnt" aria-live="polite"></p><div class="grid" id="grid"></div>
+<p aria-live="polite" class="note" id="cnt"></p><div class="grid" id="grid"></div>
 <p class="note">Listings are leads, not guarantees. Exact deadlines and subjects are shown only where independently checked; otherwise they are marked unverified. Never treat a typical timing window as an application deadline. Confirm requirements on the official page.</p>
 <p>Know one we missed? <a class="btn js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Submit an opportunity ↗</a></p></section>
 </div>
@@ -120,29 +118,29 @@
 <section id="unis"><div class="eyebrow">Go where your curiosity leads</div><h2>Explore by <em>destination.</em></h2>
 <div class="tabs" id="tabs"></div><div class="uni" id="ul"></div><div class="tabs" id="dl" style="margin-top:22px"></div>
 <p class="note">Lists show leading institutions with official sites (not every university). Use the buttons under each list to jump to scholarships for that country. Look for “scholarships”, “HDR”, “graduate research” or “international” on each site.</p></section>
-<section id="portals" class="band"><div><div class="eyebrow">Official portals</div><h2>National <em>scholarship gateways.</em></h2><div class="uni" id="pl"></div></div></section>
+<section class="band" id="portals"><div><div class="eyebrow">Official portals</div><h2>National <em>scholarship gateways.</em></h2><div class="uni" id="pl"></div></div></section>
 </div>
 <div data-view="tracker">
 <section class="band" id="tracker"><div><div class="eyebrow">Avasara Tracker 2.0</div><h2>Deadlines first. <em>Nothing missed.</em></h2>
 <p style="max-width:720px">Save any opportunity with ＋ Track. Set <b>your own deadline</b> (from the official page), tick off documents, and watch a live <b>Deadline Radar</b> and readiness score. Stored privately in your browser only.</p>
-<p><span id="radar" class="note"></span></p>
+<p><span class="note" id="radar"></span></p>
 <div class="scroll"><table class="trk"><thead><tr><th>Opportunity</th><th>Status</th><th>Deadline</th><th>Documents</th><th>Ready</th><th>Notes</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
-<p><button class="btn" id="exp">Export CSV</button></p></div></section>
+<p><button class="btn" id="exp">Export CSV</button> <button class="btn" id="expics">Export calendar (.ics)</button></p></div></section>
 </div>
 <div data-view="toolkit">
-<section id="toolkit" class="band"><div>
+<section class="band" id="toolkit"><div>
 <div class="eyebrow">Application toolkit</div><h2>Built for your <em>destination.</em></h2>
-<p style="max-width:720px">Every country expects a different CV and a different tone in a first email. Pick a destination, fill in your details once, then download the CV and copy the email. Nothing is uploaded; your details stay in your browser.</p>
-<div class="tabs" id="tktabs"><button class="btn on" data-tk="cv">CV builder</button><button class="btn" data-tk="em">Cold email templates</button></div>
-<div id="tk-cv" class="tk"><div>
-<label>Destination</label><select id="cvdest"></select><p id="cvtip" class="note"></p>
-<label class="chk"><input type="checkbox" id="cvph"> Include photo</label>
-<label class="chk"><input type="checkbox" id="cvpd"> Include date of birth and nationality</label>
-<label>Photo file (optional, not saved)</label><input type="file" id="cvphoto" accept="image/*">
+<p style="max-width:720px">Create a CV for your destination: choose a layout, edit your details and print or save as PDF. Your details stay in your browser.</p>
+<div class="tabs" id="tktabs"><button class="btn on" data-tk="cv">CV builder</button><button class="btn" data-tk="em">Cold email templates</button></div><section class="av-cv-studio" id="cvtemplates"><h3>Choose and edit your CV / résumé</h3><p class="note">Select a style, then enter your details in the editor below. Your live preview updates instantly. Save or print as PDF when ready—no Word download required. Details stay in this browser.</p><div class="av-cv-controls"><label for="av-cv-filter">Filter styles</label><select id="av-cv-filter"><option value="all">All styles</option><option value="research">Academic &amp; research</option><option value="professional">Professional</option><option value="scholarship">Scholarships</option><option value="europe">European</option></select></div><div aria-label="CV layout styles" class="av-cv-gallery" id="av-cv-gallery" role="group"></div><p aria-live="polite" class="note" id="av-cv-style-status" role="status">Selected: Academic Research</p></section>
+<div class="tk" id="tk-cv"><div>
+<label>Destination</label><select id="cvdest"></select><p class="note" id="cvtip"></p>
+<label class="chk"><input id="cvph" type="checkbox"/> Include photo</label>
+<label class="chk"><input id="cvpd" type="checkbox"/> Include date of birth and nationality</label>
+<label>Photo file (optional, not saved)</label><input accept="image/*" id="cvphoto" type="file"/>
 <div id="cvfields"></div></div>
-<div><p><button class="btn dk" id="cvprint">Print / Save PDF ↗</button> <a class="btn" href="#cvtemplates">Browse Word CV templates ↓</a> <a class="btn" href="https://europass.europa.eu/en/create-europass-cv" target="_blank" rel="noopener">Europass CV ↗</a></p><div id="cvprev"></div>
+<div><p><button class="btn dk" id="cvprint">Print / Save PDF ↗</button> <button class="btn" id="av-cv-browse" type="button">Choose CV style ↑</button> <a class="btn" href="https://europass.europa.eu/en/create-europass-cv" rel="noopener" target="_blank">Europass CV ↗</a></p><div id="cvprev"></div>
 <p class="note">In the print window choose “Save as PDF”. Conventions shown are typical; always follow the program’s own instructions.</p></div></div>
-<section id="cvtemplates" style="margin:26px 0 34px"><h3 style="font-size:22px">Choose a Word CV / résumé template</h3><p class="note">Preview the layout here, then download an editable .docx file with guided placeholders. Choose the format requested by the scholarship or employer.</p><div class="av-cv-controls"><label for="av-cv-filter">Browse templates by purpose</label><select id="av-cv-filter"><option value="all">All templates</option><option value="research">Research & PhD</option><option value="professional">Professional & internships</option><option value="scholarship">Scholarship applications</option><option value="europe">Europe</option></select></div><div id="av-cv-gallery" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px"><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Research interests<hr>Education<hr>Publications<hr>Grants</small></div><h4 style="margin:12px 0 4px">Academic Research CV</h4><p class="note">PhD · postdoctoral · publications</p><a class="btn dk" href="cv-templates/academic-research.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Referees</small></div><h4 style="margin:12px 0 4px">Australian CV</h4><p class="note">Australia · New Zealand</p><a class="btn dk" href="cv-templates/australian.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Education<hr>Experience<hr>Projects<hr>Skills</small></div><h4 style="margin:12px 0 4px">US Résumé</h4><p class="note">Internships · industry · 1 page</p><a class="btn dk" href="cv-templates/us-resume.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Skills</small></div><h4 style="margin:12px 0 4px">UK CV</h4><p class="note">UK master’s · graduate roles</p><a class="btn dk" href="cv-templates/uk-cv.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Languages</small></div><h4 style="margin:12px 0 4px">European CV</h4><p class="note">European applications · skills</p><a class="btn dk" href="cv-templates/europass-inspired.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Education<hr>Awards<hr>Volunteering<hr>Projects</small></div><h4 style="margin:12px 0 4px">Scholarship Student CV</h4><p class="note">Bachelor’s · master’s applicants</p><a class="btn dk" href="cv-templates/scholarship-student.docx" download>Choose template ↓</a></article></div><dialog id="av-cv-dialog" aria-labelledby="av-cv-dialog-title"><button class="btn" id="av-cv-close" type="button">Close preview ✕</button><h3 id="av-cv-dialog-title"></h3><div id="av-cv-dialog-content"></div><p class="note">This is a structural preview. The actual editable Word document may differ slightly by application.</p><a class="btn dk" id="av-cv-download" download>Download editable Word file ↓</a></dialog></section><div id="tk-em" class="tk" style="display:none"><div>
+<div class="tk" id="tk-em" style="display:none"><div>
 <label>Professor’s country</label><select id="emdest"></select>
 <label>Type of email</label><select id="emtype"><option value="phd">PhD supervisor enquiry</option><option value="master">Master’s (research) enquiry</option><option value="intern">Summer research / internship</option><option value="follow">Follow-up (no reply yet)</option><option value="scholar">Scholarship eligibility question</option><option value="ref">Reference request to a referee</option></select>
 <div id="emfields"></div></div>
@@ -153,7 +151,7 @@
 </div>
 <div data-view="accessibility">
 <section id="accessibility"><div class="eyebrow">Accessibility</div><h2>Make AVASARA <em>yours.</em></h2><p>Choose a comfortable reading experience. Preferences stay on this device. Use Tab to move between controls, Enter to activate buttons, and Escape to close the accessibility panel.</p>
-<div class="grid"><div class="card"><h3>Reading preferences</h3><label for="a-font">Text size</label><select id="a-font"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select><label class="chk"><input type="checkbox" id="a-contrast"> High contrast</label><label class="chk"><input type="checkbox" id="a-motion"> Reduce animation</label><label class="chk"><input type="checkbox" id="a-underline"> Underline links</label><p><button class="btn" id="a-reset">Reset preferences</button></p></div><div class="card"><h3>Keyboard & screen readers</h3><p>Skip to content using the first keyboard link. Opportunity search results announce updates to assistive technology. Form controls have accessible names.</p><p>Need another format? The Word templates can be edited with accessible headings in Microsoft Word or compatible editors.</p></div></div></section></div>
+<div class="grid"><div class="card"><h3>Reading preferences</h3><label for="a-font">Text size</label><select id="a-font"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select><label class="chk"><input id="a-contrast" type="checkbox"/> High contrast</label><label class="chk"><input id="a-motion" type="checkbox"/> Reduce animation</label><label class="chk"><input id="a-underline" type="checkbox"/> Underline links</label><p><button class="btn" id="a-reset">Reset preferences</button></p></div><div class="card"><h3>Keyboard &amp; screen readers</h3><p>Skip to content using the first keyboard link. Opportunity search results announce updates to assistive technology. Form controls have accessible names.</p><p>Need another format? The Word templates can be edited with accessible headings in Microsoft Word or compatible editors.</p></div></div></section></div>
 <div data-view="academy">
 <section id="academy"><div class="eyebrow">Avasara Academy</div><h2>Apply <em>smarter.</em></h2><div class="grid">
 <div class="card"><div class="tags"><span>Step 1</span></div><h3>Check eligibility</h3><p>Citizenship, degree level, GPA, language score and field. Rule out mismatches before you write anything.</p></div>
@@ -165,59 +163,62 @@
 <div class="card"><div class="tags"><span>USA</span><span>PhD</span></div><h3>PhD in the USA</h3><p>Strong programs usually fund admitted PhD students with a stipend and tuition waiver, through assistantships or fellowships. You apply to the program, not to a separate scholarship. Ask about funding before you accept.</p></div>
 <div class="card"><div class="tags"><span>USA</span><span>Master’s</span></div><h3>Master’s in the USA</h3><p>Funding is limited and mostly partial: departmental awards, merit aid and some assistantships. Check each department’s funding page and the deadline for aid, which can be earlier than admission.</p></div>
 <div class="card"><div class="tags"><span>USA</span><span>Bachelor</span></div><h3>Bachelor’s in the USA</h3><p>International aid comes from the university and is usually decided at admission. A few, such as Harvard, MIT, Princeton, Yale and Amherst, say they are need-blind for internationals. Confirm the policy each year.</p></div>
-</div><section id="av-global-academy" class="av-global-academy"><div class="eyebrow">Global Academy</div><h3>Study, research and internships across the world</h3><p class="note">Choose a region for official starting points. Funding and application deadlines depend on the specific programme.</p><div class="av-region-grid">
-<article class="card"><h4>Europe</h4><p>Salaried PhDs, Erasmus Mundus, MSCA, postdoctoral positions and summer research placements.</p><a href="https://euraxess.ec.europa.eu/jobs/search" target="_blank" rel="noopener">EURAXESS jobs ↗</a></article>
-<article class="card"><h4>Australia &amp; Oceania</h4><p>RTP, university research scholarships, vacation studentships and New Zealand postgraduate funding.</p><a href="https://www.education.gov.au/research-block-grants/research-training-program" target="_blank" rel="noopener">Australian RTP ↗</a></article>
-<article class="card"><h4>Asia</h4><p>MEXT, GKS, university research placements, international master's programmes and summer internships.</p><a href="https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/" target="_blank" rel="noopener">Japan scholarships ↗</a></article>
-<article class="card"><h4>Africa</h4><p>Regional postgraduate programmes, African research institutes, university scholarships and mobility funding.</p><a href="https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/" target="_blank" rel="noopener">Scholars partners ↗</a></article>
-<article class="card"><h4>Americas</h4><p>Graduate assistantships, university funding, research fellowships and summer internships.</p><a href="https://www.fulbrightprogram.org/" target="_blank" rel="noopener">Fulbright programmes ↗</a></article>
-<article class="card"><h4>Middle East</h4><p>Research universities, postgraduate scholarships and funded science and technology programmes.</p><a href="https://www.kaust.edu.sa/en/study" target="_blank" rel="noopener">KAUST study ↗</a></article>
+</div><section class="av-global-academy" id="av-global-academy"><div class="eyebrow">Global Academy</div><h3>Study, research and internships across the world</h3><p class="note">Choose a region for official starting points. Funding and application deadlines depend on the specific programme.</p><div class="av-region-grid">
+<article class="card"><h4>Europe</h4><p>Salaried PhDs, Erasmus Mundus, MSCA, postdoctoral positions and summer research placements.</p><a href="https://euraxess.ec.europa.eu/jobs/search" rel="noopener" target="_blank">EURAXESS jobs ↗</a></article>
+<article class="card"><h4>Australia &amp; Oceania</h4><p>RTP, university research scholarships, vacation studentships and New Zealand postgraduate funding.</p><a href="https://www.education.gov.au/research-block-grants/research-training-program" rel="noopener" target="_blank">Australian RTP ↗</a></article>
+<article class="card"><h4>Asia</h4><p>MEXT, GKS, university research placements, international master's programmes and summer internships.</p><a href="https://www.studyinjapan.go.jp/en/planning/scholarships/mext-scholarships/" rel="noopener" target="_blank">Japan scholarships ↗</a></article>
+<article class="card"><h4>Africa</h4><p>Regional postgraduate programmes, African research institutes, university scholarships and mobility funding.</p><a href="https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/" rel="noopener" target="_blank">Scholars partners ↗</a></article>
+<article class="card"><h4>Americas</h4><p>Graduate assistantships, university funding, research fellowships and summer internships.</p><a href="https://www.fulbrightprogram.org/" rel="noopener" target="_blank">Fulbright programmes ↗</a></article>
+<article class="card"><h4>Middle East</h4><p>Research universities, postgraduate scholarships and funded science and technology programmes.</p><a href="https://www.kaust.edu.sa/en/study" rel="noopener" target="_blank">KAUST study ↗</a></article>
 </div><p class="note">Summer can mean December–February in the Southern Hemisphere. Search by actual start dates and application windows, not the word “summer” alone.</p></section></section>
+</div>
+<div data-view="community">
+<section aria-labelledby="community-heading" id="community-board">
+<div class="eyebrow">Shared by the AVASARA community</div>
+<h2 id="community-heading">Opportunities worth <em>sharing.</em></h2>
+<p style="max-width:760px">Discover scholarships, internships, summer schools and research opportunities submitted by the community and approved for publication. Always confirm deadlines and eligibility on the official website.</p>
+<div class="av-community-actions"><a class="btn dk js-submit" href="https://docs.google.com/forms/d/e/1FAIpQLSf2ORGTOZiMiZCe0DTGqW0CbLUeS5lQXgIaS6kNZgk9tYPqMA/viewform" rel="noopener" target="_blank">＋ Submit an opportunity ↗</a><a class="btn" href="#scholarships">Browse all opportunities ↗</a></div>
+<p class="note" id="av-community-count" role="status">Loading approved community opportunities…</p>
+<div aria-live="polite" class="grid" id="av-community-grid"></div>
+<p class="note">Submissions are reviewed before appearing here. Personal contact details are not displayed.</p>
+</section>
 </div>
 <div data-view="about">
 <section id="about">
-  <div class="founder-layout">
-
-    <aside class="founder-sidebar">
-      <img src="1O1A9320.jpeg" alt="Dibya Bhatta, founder of Avasara" class="founder-photo" onerror="this.style.display='none'">
-      <h3 class="founder-name">Dibya Bhatta</h3>
-      <p class="founder-role">Founder of Avasara</p>
-      <p class="founder-role">PhD Researcher · Australian National University</p>
-    </aside>
-
-    <div class="founder-story">
-      <div class="eyebrow">A note from the founder</div>
-
-      <h2>Why I started <em>Avasara.</em></h2>
-
-      <p class="founder-lead">
+<div class="founder-layout">
+<aside class="founder-sidebar">
+<img alt="Dibya Bhatta, founder of Avasara" class="founder-photo" onerror="this.style.display='none'" src="1O1A9320.jpeg"/>
+<h3 class="founder-name">Dibya Bhatta</h3>
+<p class="founder-role">Founder of Avasara</p>
+<p class="founder-role">PhD Researcher · Australian National University</p>
+</aside>
+<div class="founder-story">
+<div class="eyebrow">A note from the founder</div>
+<h2>Why I started <em>Avasara.</em></h2>
+<p class="founder-lead">
         Opportunities are everywhere. Finding the right one
         shouldn't be the hardest part.
       </p>
-
-      <p>
+<p>
         I'm a PhD researcher at the Australian National University, and before coming to Australia,
         I had the opportunity to study in South Korea on a government scholarship. 
         These experiences made me realise how much studying abroad can change the way you see the world and the opportunities available to you.
 
       </p>
-
-      <p>
+<p>
         Over the years, I've shared scholarships and study opportunities with students through Facebook and LinkedIn. 
         But I noticed that good opportunities often get lost in posts, timelines and group chats. 
         Sometimes people don't even know where to begin looking. That's one of the reasons I started Avasara.
 
 
       </p>
-
-      <p>
+<p>
         I wanted to bring opportunities, useful resources and application guidance together in one place, 
         so students don't have to spend hours searching across different websites to find something relevant to them.
 
 
       </p>
-
-      <p>
+<p>
         Avasara is still growing, and I'm building it with the hope that it becomes genuinely useful to students, 
         wherever they're from and whatever they want to study.
         If it helps someone discover an opportunity they wouldn't have found otherwise,
@@ -226,59 +227,40 @@
 
 
       </p>
-
-      <blockquote class="founder-quote">
+<blockquote class="founder-quote">
         Avasara means opportunity. And everyone deserves
         the chance to find theirs.
       </blockquote>
-
-      <div class="card candid-card">
-  <div class="eyebrow">Candid with Candidates</div>
-  <h3>Real journeys. Honest conversations.</h3>
-  <p>
+<div class="card candid-card">
+<div class="eyebrow">Candid with Candidates</div>
+<h3>Real journeys. Honest conversations.</h3>
+<p>
     Real candid Stories from people about PhD
     journey and beyond.
   </p>
-
-  <div class="youtube-preview">
-    <iframe
-      src="https://www.youtube.com/embed/UwiYEOVU8yQ"
-      title="Candid with Candidates — Avasara"
-      loading="lazy"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <a class="btn dk"
-     href="https://www.youtube.com/watch?v=UwiYEOVU8yQ"
-     target="_blank"
-     rel="noopener">
+<div class="youtube-preview">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube.com/embed/UwiYEOVU8yQ" title="Candid with Candidates — Avasara">
+</iframe>
+</div>
+<a class="btn dk" href="https://www.youtube.com/watch?v=UwiYEOVU8yQ" rel="noopener" target="_blank">
     Watch on YouTube ↗
   </a>
 </div>
-
-      <p class="founder-signoff">
+<p class="founder-signoff">
          I'm glad you're here.
       </p>
-
-      <div class="founder-contact">
-        <p>If you want personal guidance with your application, you can reach me here.</p>
-        <a class="btn"
-           href="https://buymeacoffee.com/dibyabhatta/extras"
-           target="_blank"
-           rel="noopener">
+<div class="founder-contact">
+<p>If you want personal guidance with your application, you can reach me here.</p>
+<a class="btn" href="https://buymeacoffee.com/dibyabhatta/extras" rel="noopener" target="_blank">
           Get personal guidance ↗
         </a>
-      </div>
-    </div>
-
-  </div>
+</div>
+</div>
+</div>
 </section>
-<div class="cta"><h2 style="margin:0">Know an opportunity?<br><em style="font-style:italic">Pass it forward.</em></h2>
+<div class="cta"><h2 style="margin:0">Know an opportunity?<br/><em style="font-style:italic">Pass it forward.</em></h2>
 <p style="max-width:480px">Have an official scholarship announcement, useful resource or correction? Help keep Avasara useful for the next person searching for a chance.</p>
 <a class="btn dk js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Share an opportunity ↗</a></div>
-
 </div>
 <script>
 /*
@@ -1487,7 +1469,7 @@ const AVASARA = {
 <script>
 /* Show each tab as a section of this one page, using the URL hash (#tracker, #about ...). */
 (() => {
-  const VIEWS = ["home","scholarships","destinations","tracker","toolkit","academy","about","accessibility"];
+  const VIEWS = ["home","scholarships","destinations","tracker","toolkit","academy","community","about","accessibility"];
   const VIEW_OF = { soon: "home", match: "scholarships", board: "scholarships", unis: "destinations", portals: "destinations" };
   document.querySelectorAll("a[href]").forEach((a) => {
     const m = a.getAttribute("href").match(/^(index|scholarships|destinations|tracker|toolkit|academy|about)\.html(#.*)?$/);
@@ -1517,10 +1499,63 @@ body.av-reduce-motion *,body.av-reduce-motion *::before,body.av-reduce-motion *:
 .av-dialog label{display:block;margin:10px 0}.av-dialog button{margin:4px}
 </style>
 <a class="skip-av" href="#board" id="skipAv">Skip to opportunities</a>
-<button class="av-float" id="accessOpen" aria-expanded="false" aria-controls="accessPanel">♿ Accessibility</button>
-<div class="av-dialog" id="accessPanel" hidden role="dialog" aria-label="Accessibility preferences"><h3>Accessibility preferences</h3><label>Text size <select id="quickFont"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select></label><label><input id="quickContrast" type="checkbox"> High contrast</label><label><input id="quickMotion" type="checkbox"> Reduce motion</label><label><input id="quickUnderline" type="checkbox"> Underline links</label><button class="btn" id="quickReset">Reset</button><button class="btn dk" id="accessClose">Close</button><p><a href="#accessibility" id="accessDetails">Full accessibility information</a></p></div>
-<script src="enhancements.js" defer></script>
-<script src="discovery-upgrade.js" defer></script>
-<link rel="stylesheet" href="automation-ui.css">
-<script src="automation-ui.js" defer></script>
+<button aria-controls="accessPanel" aria-expanded="false" class="av-float" id="accessOpen">♿ Accessibility</button>
+<div aria-label="Accessibility preferences" class="av-dialog" hidden="" id="accessPanel" role="dialog"><h3>Accessibility preferences</h3><label>Text size <select id="quickFont"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select></label><label><input id="quickContrast" type="checkbox"/> High contrast</label><label><input id="quickMotion" type="checkbox"/> Reduce motion</label><label><input id="quickUnderline" type="checkbox"/> Underline links</label><button class="btn" id="quickReset">Reset</button><button class="btn dk" id="accessClose">Close</button><p><a href="#accessibility" id="accessDetails">Full accessibility information</a></p></div>
+<script defer="" src="enhancements.js"></script>
+<script defer="" src="cv-studio.js"></script>
+<link href="automation-ui.css" rel="stylesheet"/>
+<script defer="" src="automation-ui.js"></script>
+<script>
+(() => {
+  const grid = document.getElementById('av-community-grid');
+  const count = document.getElementById('av-community-count');
+  if (!grid || !count) return;
+  const allowed = new Set(['Scholarship','Research','Internship','Summer school','Postdoctoral']);
+  function node(tag, className, text) {
+    const el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text !== undefined) el.textContent = String(text);
+    return el;
+  }
+  function validURL(raw) {
+    try { const u = new URL(String(raw)); return u.protocol === 'https:' || u.protocol === 'http:' ? u.href : null; }
+    catch { return null; }
+  }
+  async function render() {
+    try {
+      const response = await fetch('community.json', {cache:'no-store'});
+      if (!response.ok) throw new Error('Unable to load community listings');
+      const records = await response.json();
+      if (!Array.isArray(records)) throw new Error('Invalid community data');
+      const seen = new Set();
+      let displayed = 0;
+      for (const item of records) {
+        if (!item || typeof item !== 'object') continue;
+        const url = validURL(item.url);
+        if (!url || !String(item.name || '').trim() || seen.has(url)) continue;
+        seen.add(url);
+        const card = node('article','card');
+        const tags = node('div','tags');
+        for (const tag of [allowed.has(item.type) ? item.type : 'Opportunity', item.country || 'Worldwide', item.funding || 'Funding varies']) {
+          tags.appendChild(node('span','',String(tag).slice(0,90)));
+        }
+        card.appendChild(tags);
+        card.appendChild(node('h3','',String(item.name).slice(0,180)));
+        if (item.field) card.appendChild(node('p','note','Subject: '+String(item.field).slice(0,160)));
+        if (item.deadline && /^\d{4}-\d{2}-\d{2}$/.test(item.deadline)) card.appendChild(node('p','note','Deadline (as submitted): '+item.deadline));
+        if (item.description) card.appendChild(node('p','',String(item.description).slice(0,320)));
+        const link = node('a','btn','View official opportunity ↗');
+        link.href=url; link.target='_blank'; link.rel='noopener noreferrer';
+        card.appendChild(link);
+        grid.appendChild(card);
+        displayed++;
+      }
+      count.textContent = displayed ? displayed+' approved community opportunit'+(displayed===1?'y':'ies') : 'No approved community opportunities have been published yet. Be the first to submit one!';
+    } catch (error) {
+      count.textContent = 'Community opportunities could not be loaded. Please try again later.';
+    }
+  }
+  render();
+})();
+</script>
 </body></html>

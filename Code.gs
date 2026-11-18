@@ -11,7 +11,7 @@
 
 const CONFIG = {
   OWNER: "dibyabhatta",
-  REPO: "avasara3.0",
+  REPO: "avasara4.0",
   BRANCH: "main",
   FILE_PATH: "community.json",
   SHEET_NAME: "Form_Responses", // the tab that receives the form answers

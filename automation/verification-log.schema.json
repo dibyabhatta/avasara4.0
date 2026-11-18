@@ -1,0 +1,29 @@
+{
+  "description": "Append-only manual review events. HTTP response checks are not factual verification.",
+  "required": [
+    "checked_at",
+    "record_id",
+    "official_url",
+    "source_url",
+    "reviewer",
+    "result",
+    "confirmed",
+    "notes"
+  ],
+  "results": [
+    "verified",
+    "partial",
+    "needs-review",
+    "closed",
+    "broken-link"
+  ],
+  "confirmed_fields": [
+    "title",
+    "deadline",
+    "funding",
+    "eligibility",
+    "majors",
+    "application_url",
+    "status"
+  ]
+}
