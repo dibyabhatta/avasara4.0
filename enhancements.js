@@ -1,0 +1,16 @@
+(() => {
+"use strict";
+const $ = id => document.getElementById(id);
+const keys = ["font","contrast","motion","underline"];
+const get = k => {try{return localStorage.getItem("av-access-"+k)}catch(e){return null}};
+const put = (k,v) => {try{localStorage.setItem("av-access-"+k,v)}catch(e){}};
+function apply(){const font=get("font")||"100";document.documentElement.style.fontSize=font+"%";for(const k of keys.slice(1))document.body.classList.toggle("av-"+(k==="contrast"?"high-contrast":k==="motion"?"reduce-motion":"underlined"),get(k)==="true");for(const id of ["a-font","quickFont"])if($(id))$(id).value=font;for(const k of keys.slice(1))for(const prefix of ["a-","quick"]){const id=prefix==="a-"?"a-"+k:"quick"+k[0].toUpperCase()+k.slice(1);if($(id))$(id).checked=get(k)==="true";}}
+for(const k of keys){const ids=k==="font"?["a-font","quickFont"]:["a-"+k,"quick"+k[0].toUpperCase()+k.slice(1)];for(const id of ids){const el=$(id);if(el)el.addEventListener("change",()=>{put(k,k==="font"?el.value:String(el.checked));apply()})}}
+function reset(){for(const k of keys)put(k,k==="font"?"100":"false");apply()}
+for(const id of ["a-reset","quickReset"])if($(id))$(id).addEventListener("click",reset);
+const panel=$("accessPanel"),trigger=$("accessOpen");function close(){panel.hidden=true;trigger.setAttribute("aria-expanded","false");trigger.focus()}
+trigger.addEventListener("click",()=>{panel.hidden=!panel.hidden;trigger.setAttribute("aria-expanded",String(!panel.hidden));if(!panel.hidden)$("quickFont").focus()});$("accessClose").addEventListener("click",close);$("accessDetails").addEventListener("click",close);document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!panel.hidden)close()});
+apply();
+// Calendar export uses a local .ics file; no external account required.
+const tracker=document.getElementById("tracker");if(tracker){const b=document.createElement("button");b.className="btn";b.textContent="Export tracked deadlines to calendar (.ics)";b.addEventListener("click",()=>{let items=[];try{items=JSON.parse(localStorage.getItem("avtrk")||"[]")}catch(e){};if(!Array.isArray(items))items=[];const esc=s=>String(s||"").replace(/[\r\n,;]/g," ");const events=items.filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.deadline||"")).map((x,i)=>{const date=x.deadline.replace(/-/g,"");const next=new Date(x.deadline+"T12:00:00Z");next.setUTCDate(next.getUTCDate()+1);const end=next.toISOString().slice(0,10).replace(/-/g,"");return ["BEGIN:VEVENT","UID:avasara-"+i+"-"+date+"@local","DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,""),"DTSTART;VALUE=DATE:"+date,"DTEND;VALUE=DATE:"+end,"SUMMARY:"+esc(x.name||"Scholarship deadline"),"DESCRIPTION:Confirm the exact time and deadline with the official provider.","END:VEVENT"].join("\r\n")});if(!events.length){alert("Add a deadline to your tracker first.");return}const blob=new Blob(["BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//AVASARA//Deadline Radar//EN\r\n"+events.join("\r\n")+"\r\nEND:VCALENDAR"],{type:"text/calendar"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="avasara-deadlines.ics";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000)});tracker.appendChild(b)}
+})();

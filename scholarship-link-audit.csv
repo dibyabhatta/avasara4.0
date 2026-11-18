@@ -1,0 +1,363 @@
+name,type,country,current_url,url_path_assessment,verified_deadline,verified_majors,verification_status
+Marie Skłodowska-Curie Postdoctoral Fellowships,Postdoctoral,Europe / Global,https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships,Specificity not yet manually verified,2027-09-08,Research across disciplines; subject to call eligibility,Official source checked 2026-11-19
+Alexander von Humboldt Research Fellowship,Postdoctoral,Germany,https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship,Specificity not yet manually verified,,,Not individually verified
+JSPS Postdoctoral Fellowship for Research in Japan,Postdoctoral,Japan,https://www.jsps.go.jp/english/e-fellow/,Specificity not yet manually verified,,,Not individually verified
+EMBO Postdoctoral Fellowships,Postdoctoral,Europe / Global,https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships/,Specificity not yet manually verified,,,Not individually verified
+HFSP Postdoctoral Fellowships,Postdoctoral,Global,https://www.hfsp.org/funding/postdoctoral-fellowships,Specificity not yet manually verified,,,Not individually verified
+Wellcome Early-Career Awards,Postdoctoral,United Kingdom / Global,https://wellcome.org/grant-funding/schemes/early-career-awards,Specificity not yet manually verified,,,Not individually verified
+NIH Postdoctoral Research Opportunities,Postdoctoral,USA,https://www.training.nih.gov/,Potentially generic — manual review needed,,,Not individually verified
+Banting Postdoctoral Fellowships,Postdoctoral,Canada,https://banting.fellowships-bourses.gc.ca/,Potentially generic — manual review needed,,,Not individually verified
+Chevening Scholarships,Scholarship,United Kingdom,https://www.chevening.org,Potentially generic — manual review needed,2026-10-06,Eligible UK taught master’s courses; check course-specific eligibility,Official source checked 2026-11-19
+Commonwealth Scholarships,Scholarship,United Kingdom,https://cscuk.fcdo.gov.uk,Potentially generic — manual review needed,,,Not individually verified
+Gates Cambridge,Scholarship,United Kingdom,https://www.gatescambridge.org,Potentially generic — manual review needed,,,Not individually verified
+Rhodes Scholarship (Oxford),Scholarship,United Kingdom,https://www.rhodeshouse.ox.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Clarendon Scholarships (Oxford),Scholarship,United Kingdom,https://www.ox.ac.uk/clarendon,Specificity not yet manually verified,,,Not individually verified
+LSE Summer Schools,Summer school,United Kingdom,https://www.lse.ac.uk/study-at-lse/summer-schools,Specificity not yet manually verified,,,Not individually verified
+Fulbright Foreign Student Program,Scholarship,USA,https://fulbrightprogram.org,Potentially generic — manual review needed,,,Not individually verified
+Knight-Hennessy Scholars (Stanford),Scholarship,USA,https://knight-hennessy.stanford.edu,Potentially generic — manual review needed,,,Not individually verified
+Hubert H. Humphrey Fellowship,Scholarship,USA,https://www.humphreyfellowship.org,Potentially generic — manual review needed,,,Not individually verified
+Harvard College Financial Aid (international applicants),Scholarship,USA,https://college.harvard.edu/financial-aid,Specificity not yet manually verified,,,Not individually verified
+MIT Financial Aid (international applicants),Scholarship,USA,https://mitadmissions.org/afford,Specificity not yet manually verified,,,Not individually verified
+Princeton Financial Aid (international applicants),Scholarship,USA,https://admission.princeton.edu/cost-aid,Specificity not yet manually verified,,,Not individually verified
+Yale Financial Aid (international applicants),Scholarship,USA,https://admissions.yale.edu/financial-aid,Specificity not yet manually verified,,,Not individually verified
+Stanford Financial Aid (international applicants),Scholarship,USA,https://financialaid.stanford.edu,Potentially generic — manual review needed,,,Not individually verified
+Amherst College Financial Aid (international applicants),Scholarship,USA,https://www.amherst.edu/admission,Specificity not yet manually verified,,,Not individually verified
+EducationUSA Funding Guide,Scholarship,USA,https://educationusa.state.gov,Potentially generic — manual review needed,,,Not individually verified
+Vanier Canada Graduate Scholarships,Scholarship,Canada,https://vanier.gc.ca,Potentially generic — manual review needed,,,Not individually verified
+Lester B. Pearson Scholarship (Toronto),Scholarship,Canada,https://www.utoronto.ca/pearson,Specificity not yet manually verified,,,Not individually verified
+Mitacs Globalink Research Internship,Internship,Canada,https://www.mitacs.ca/our-programs/globalink-research-internship-students/,Specificity not yet manually verified,,,Not individually verified
+EduCanada Scholarships,Scholarship,Canada,https://www.educanada.ca/scholarships-bourses,Specificity not yet manually verified,,,Not individually verified
+Australia Awards Scholarships,Scholarship,Australia,https://www.dfat.gov.au/people-to-people/australia-awards,Specificity not yet manually verified,,,Not individually verified
+Research Training Program (RTP) — Australian Government,Scholarship,Australia,https://www.education.gov.au/research-block-grants/research-training-program,Specificity not yet manually verified,,,Not individually verified
+"ANU HDR Scholarships (incl. RTP, stipend + fees)",Scholarship,Australia,https://www.anu.edu.au/study/scholarships,Specificity not yet manually verified,,,Not individually verified
+University of Sydney HDR Scholarships (RTP & international),Scholarship,Australia,https://www.sydney.edu.au/scholarships,Potentially generic — manual review needed,,,Not individually verified
+UNSW Scientia & HDR Scholarships,Scholarship,Australia,https://www.unsw.edu.au/research/hdr/scholarships,Specificity not yet manually verified,,,Not individually verified
+University of Melbourne Graduate Research Scholarships,Scholarship,Australia,https://scholarships.unimelb.edu.au,Potentially generic — manual review needed,,,Not individually verified
+University of Queensland HDR Scholarships,Scholarship,Australia,https://scholarships.uq.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Monash Graduate Research Scholarships,Scholarship,Australia,https://www.monash.edu/graduate-research/future-students/scholarships,Specificity not yet manually verified,,,Not individually verified
+CSIRO Postgraduate Studentships & Top-Up,Scholarship,Australia,https://www.csiro.au/en/work-with-us/study-with-us,Specificity not yet manually verified,,,Not individually verified
+CSIRO Vacation & Student Programs,Internship,Australia,https://www.csiro.au/en/careers/student-programs,Specificity not yet manually verified,,,Not individually verified
+Destination Australia,Scholarship,Australia,https://www.education.gov.au/destination-australia,Specificity not yet manually verified,,,Not individually verified
+ANU Summer Research Scholarships,Research,Australia,https://www.anu.edu.au/study/scholarships,Specificity not yet manually verified,,,Not individually verified
+NZ Scholarships (MFAT),Scholarship,New Zealand,https://www.mfat.govt.nz/en/aid-and-development/scholarships,Specificity not yet manually verified,,,Not individually verified
+University of Auckland Scholarships,Scholarship,New Zealand,https://www.auckland.ac.nz/en/study/scholarships-and-awards.html,Specificity not yet manually verified,,,Not individually verified
+University of Otago Scholarships,Scholarship,New Zealand,https://www.otago.ac.nz/study/scholarships,Specificity not yet manually verified,,,Not individually verified
+Victoria University of Wellington Scholarships,Scholarship,New Zealand,https://www.wgtn.ac.nz/scholarships,Potentially generic — manual review needed,,,Not individually verified
+Royal Society Te Apārangi Funding,Research,New Zealand,https://www.royalsociety.org.nz,Potentially generic — manual review needed,,,Not individually verified
+Global Korea Scholarship (GKS),Scholarship,South Korea,https://www.studyinkorea.go.kr,Potentially generic — manual review needed,,,Not individually verified
+KAIST International Admissions & Scholarships,Scholarship,South Korea,https://admission.kaist.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Yonsei Summer School,Summer school,South Korea,https://summer.yonsei.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+MEXT Japanese Government Scholarship,Scholarship,Japan,https://www.studyinjapan.go.jp,Potentially generic — manual review needed,,,Not individually verified
+JASSO Scholarships & Exchange,Scholarship,Japan,https://www.jasso.go.jp/en/ryugaku/,Specificity not yet manually verified,,,Not individually verified
+ADB-Japan Scholarship Program,Scholarship,Japan,https://www.adb.org/work-with-us/careers/japan-scholarship-program,Specificity not yet manually verified,,,Not individually verified
+CSC Chinese Government Scholarship,Scholarship,China,https://www.csc.edu.cn/laihua,Specificity not yet manually verified,,,Not individually verified
+Schwarzman Scholars (Tsinghua),Scholarship,China,https://www.schwarzmanscholars.org,Potentially generic — manual review needed,,,Not individually verified
+Yenching Academy (Peking University),Scholarship,China,https://yenchingacademy.pku.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+ICCR Scholarships (India),Scholarship,India,https://www.iccr.gov.in,Potentially generic — manual review needed,,,Not individually verified
+Study in India Portal,Scholarship,India,https://studyinindia.gov.in,Potentially generic — manual review needed,,,Not individually verified
+"Ministry of Education, Nepal — Scholarships",Scholarship,Nepal,https://moest.gov.np,Potentially generic — manual review needed,,,Not individually verified
+Kathmandu Metropolitan City (KMC) Grade 11–12 Scholarship Exam,Scholarship,Nepal,https://entrance.kathmandu.gov.np,Potentially generic — manual review needed,,,Not individually verified
+"Mahatma Gandhi Scholarship Scheme (Embassy of India, Kathmandu)",Scholarship,Nepal,https://www.indembkathmandu.gov.in,Potentially generic — manual review needed,,,Not individually verified
+"Golden Jubilee Scholarship Scheme (Embassy of India, Kathmandu)",Scholarship,Nepal,https://www.indembkathmandu.gov.in,Potentially generic — manual review needed,,,Not individually verified
+MBBS & BDS Scholarship Seats — Medical Education Commission (Medicine),Scholarship,Nepal,https://mec.gov.np,Potentially generic — manual review needed,,,Not individually verified
+"MoEST Scholarships Abroad — MBBS, Engineering, Pharmacy (Bangladesh, Pakistan, Egypt & more)",Scholarship,Nepal,https://moest.gov.np,Potentially generic — manual review needed,,,Not individually verified
+"UGC Nepal Scholarships (MBBS/BE for low-income groups, MPhil & PhD fellowships)",Scholarship,Nepal,https://www.ugcnepal.edu.np,Potentially generic — manual review needed,,,Not individually verified
+"IOE Tribhuvan Scholarships & Quotas (Engineering, Architecture)",Scholarship,Nepal,https://tcioe.edu.np/admissions/scholarships,Specificity not yet manually verified,,,Not individually verified
+IAAS Tribhuvan Scholarships (Agriculture & Animal Science),Scholarship,Nepal,https://iaas.edu.np,Potentially generic — manual review needed,,,Not individually verified
+"AFU Scholarships — Agriculture & Forestry University (Agriculture, Forestry, Veterinary)",Scholarship,Nepal,https://www.afu.edu.np,Potentially generic — manual review needed,,,Not individually verified
+"IOF Tribhuvan Scholarships — Institute of Forestry, Pokhara (Forestry; also student research grants)",Scholarship,Nepal,https://www.iofpc.edu.np,Potentially generic — manual review needed,,,Not individually verified
+"Kathmandu University Scholarships (Engineering, Science, Management, Medicine)",Scholarship,Nepal,https://ku.edu.np,Potentially generic — manual review needed,,,Not individually verified
+"Pokhara University Scholarships (Engineering, Health, Management)",Scholarship,Nepal,https://pu.edu.np,Potentially generic — manual review needed,,,Not individually verified
+Tribhuvan University Scholarships & Quotas (all faculties),Scholarship,Nepal,https://tu.edu.np,Potentially generic — manual review needed,,,Not individually verified
+Embassy of India — Engineering & Medical seats in India (Self Finance Scheme),Scholarship,Nepal,https://www.indembkathmandu.gov.in,Potentially generic — manual review needed,,,Not individually verified
+"Embassy of India — Masters scholarships (Homi Bhabha Engineering, Nepal Aid Fund Agriculture)",Scholarship,Nepal,https://www.indembkathmandu.gov.in,Potentially generic — manual review needed,,,Not individually verified
+NAST PhD Fellowship (Science & Technology),Research,Nepal,https://nast.gov.np,Potentially generic — manual review needed,,,Not individually verified
+Embassy of India Kathmandu — Scholarships for Nepali students,Scholarship,Nepal,https://www.indembkathmandu.gov.in,Potentially generic — manual review needed,,,Not individually verified
+DAAD Scholarships Germany,Scholarship,Germany,https://www.daad.de/en/,Potentially generic — manual review needed,,,Not individually verified
+DAAD RISE Germany,Internship,Germany,https://www.daad.de/rise,Specificity not yet manually verified,,,Not individually verified
+Erasmus Mundus Joint Masters,Scholarship,Europe,https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters,Specificity not yet manually verified,,,Not individually verified
+Marie Skłodowska-Curie Actions,Research,Europe,https://marie-sklodowska-curie-actions.ec.europa.eu,Potentially generic — manual review needed,,,Not individually verified
+CERN Summer Student Programme,Internship,Switzerland,https://careers.cern/summer,Specificity not yet manually verified,,,Not individually verified
+Eiffel Excellence Scholarship,Scholarship,France,https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence,Specificity not yet manually verified,,,Not individually verified
+Swedish Institute Scholarships,Scholarship,Sweden,https://si.se/en/apply/scholarships/,Specificity not yet manually verified,,,Not individually verified
+Holland Scholarship,Scholarship,Netherlands,https://www.studyinholland.nl/finances/holland-scholarship,Specificity not yet manually verified,,,Not individually verified
+Study in Denmark — Scholarships,Scholarship,Denmark,https://studyindenmark.dk/study-options/tuition-fees-scholarships,Specificity not yet manually verified,,,Not individually verified
+Study in Finland — Scholarships,Scholarship,Finland,https://www.studyinfinland.fi/scholarships,Potentially generic — manual review needed,,,Not individually verified
+Stipendium Hungaricum,Scholarship,Hungary,https://stipendiumhungaricum.hu,Potentially generic — manual review needed,,,Not individually verified
+Study in Italy — Scholarships,Scholarship,Italy,https://studyinitaly.esteri.it,Potentially generic — manual review needed,,,Not individually verified
+OeAD Scholarships Austria,Scholarship,Austria,https://oead.at/en,Potentially generic — manual review needed,,,Not individually verified
+Government of Ireland Scholarships (HEA),Scholarship,Ireland,https://hea.ie/policy/international/,Specificity not yet manually verified,,,Not individually verified
+NAWA Poland,Scholarship,Poland,https://nawa.gov.pl/en,Potentially generic — manual review needed,,,Not individually verified
+Study in Czechia,Scholarship,Czechia,https://www.studyin.cz,Potentially generic — manual review needed,,,Not individually verified
+Türkiye Scholarships,Scholarship,Türkiye,https://turkiyeburslari.gov.tr,Potentially generic — manual review needed,,,Not individually verified
+Russian Government Scholarship (Quota),Scholarship,Russia,https://education-in-russia.com,Potentially generic — manual review needed,,,Not individually verified
+Aga Khan Foundation International Scholarship,Scholarship,Global,https://www.akdn.org/our-agencies/aga-khan-foundation/international-scholarship-programme,Specificity not yet manually verified,,,Not individually verified
+Cambridge Trust Scholarships,Scholarship,United Kingdom,https://www.cambridgetrust.org,Potentially generic — manual review needed,,,Not individually verified
+GREAT Scholarships (British Council),Scholarship,United Kingdom,https://study-uk.britishcouncil.org/scholarships-funding/great-scholarships,Specificity not yet manually verified,,,Not individually verified
+Edinburgh Postgraduate Funding,Scholarship,United Kingdom,https://www.ed.ac.uk/student-funding/postgraduate,Specificity not yet manually verified,,,Not individually verified
+Imperial College Fees & Funding,Scholarship,United Kingdom,https://www.imperial.ac.uk/study/pg/fees-and-funding/,Specificity not yet manually verified,,,Not individually verified
+Rotary Peace Fellowships,Scholarship,Global,https://www.rotary.org/en/our-programs/peace-fellowships,Specificity not yet manually verified,,,Not individually verified
+Joint Japan/World Bank Graduate Scholarship Program,Scholarship,Global,https://www.worldbank.org/en/programs/scholarships,Specificity not yet manually verified,,,Not individually verified
+AAUW International Fellowships (women),Scholarship,USA,https://www.aauw.org,Potentially generic — manual review needed,,,Not individually verified
+Taiwan MOE Scholarship,Scholarship,Taiwan,https://taiwanscholarship.moe.gov.tw,Potentially generic — manual review needed,,,Not individually verified
+Singapore A*STAR Graduate Scholarships (incl. SINGA),Scholarship,Singapore,https://www.a-star.edu.sg/Scholarships,Specificity not yet manually verified,,,Not individually verified
+NUS Scholarships,Scholarship,Singapore,https://www.nus.edu.sg/oam/scholarships,Specificity not yet manually verified,,,Not individually verified
+Hong Kong PhD Fellowship Scheme,Scholarship,Hong Kong,https://cerg1.ugc.edu.hk/hkpfs/index.html,Specificity not yet manually verified,,,Not individually verified
+KOICA Scholarship (Korea),Scholarship,South Korea,https://www.koica.go.kr,Potentially generic — manual review needed,,,Not individually verified
+ACIAR John Allwright Fellowships (Agriculture),Scholarship,Australia,https://www.aciar.gov.au,Potentially generic — manual review needed,,,Not individually verified
+Study Australia Scholarship Finder,Scholarship,Australia,https://www.studyaustralia.gov.au,Potentially generic — manual review needed,,,Not individually verified
+University of Canterbury Scholarships,Scholarship,New Zealand,https://www.canterbury.ac.nz/study/scholarships,Specificity not yet manually verified,,,Not individually verified
+Heinrich Böll Foundation Scholarships,Scholarship,Germany,https://www.boell.de/en,Potentially generic — manual review needed,,,Not individually verified
+Visegrad Scholarships,Scholarship,Europe,https://www.visegradfund.org,Potentially generic — manual review needed,,,Not individually verified
+Google Summer of Code,Internship,Global,https://summerofcode.withgoogle.com,Potentially generic — manual review needed,,,Not individually verified
+IAESTE Internships,Internship,Global,https://iaeste.org,Potentially generic — manual review needed,,,Not individually verified
+Harvard Summer School,Summer school,USA,https://summer.harvard.edu,Potentially generic — manual review needed,,,Not individually verified
+IMF Internship Program,Internship,Global,https://www.imf.org/en/About/Recruitment,Specificity not yet manually verified,,,Not individually verified
+WHO Internship Programme,Internship,Global,https://www.who.int/careers,Specificity not yet manually verified,,,Not individually verified
+FAO Internships,Internship,Global,https://www.fao.org/employment,Specificity not yet manually verified,,,Not individually verified
+FindAPhD — PhD project & funding search,Research,Global,https://www.findaphd.com,Potentially generic — manual review needed,,,Not individually verified
+EURAXESS — PhD & research positions,Research,Europe,https://euraxess.ec.europa.eu,Potentially generic — manual review needed,,,Not individually verified
+jobs.ac.uk — PhD studentships & research jobs,Research,United Kingdom,https://www.jobs.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Academic Positions — PhD & research jobs,Research,Global,https://academicpositions.com,Potentially generic — manual review needed,,,Not individually verified
+United Nations Internships,Internship,Global,https://careers.un.org,Potentially generic — manual review needed,,,Not individually verified
+World Bank Internship Program,Internship,Global,https://www.worldbank.org/en/about/careers/programs-and-internships,Specificity not yet manually verified,,,Not individually verified
+UNESCO Internships,Internship,Global,https://www.unesco.org/en/internships,Specificity not yet manually verified,,,Not individually verified
+OECD Internships,Internship,Global,https://www.oecd.org/en/about/careers.html,Specificity not yet manually verified,,,Not individually verified
+EMBL Training & PhD,Research,Europe,https://www.embl.org,Potentially generic — manual review needed,,,Not individually verified
+ANU,,,https://www.anu.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Sydney,,,https://www.sydney.edu.au,Potentially generic — manual review needed,,,Not individually verified
+UNSW,,,https://www.unsw.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Melbourne,,,https://www.unimelb.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Queensland,,,https://www.uq.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Monash,,,https://www.monash.edu,Potentially generic — manual review needed,,,Not individually verified
+Adelaide,,,https://www.adelaide.edu.au,Potentially generic — manual review needed,,,Not individually verified
+UWA,,,https://www.uwa.edu.au,Potentially generic — manual review needed,,,Not individually verified
+UTS,,,https://www.uts.edu.au,Potentially generic — manual review needed,,,Not individually verified
+RMIT,,,https://www.rmit.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Macquarie,,,https://www.mq.edu.au,Potentially generic — manual review needed,,,Not individually verified
+QUT,,,https://www.qut.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Deakin,,,https://www.deakin.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Curtin,,,https://www.curtin.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Griffith,,,https://www.griffith.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Newcastle,,,https://www.newcastle.edu.au,Potentially generic — manual review needed,,,Not individually verified
+UTAS,,,https://www.utas.edu.au,Potentially generic — manual review needed,,,Not individually verified
+James Cook,,,https://www.jcu.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Wollongong,,,https://www.uow.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Canberra,,,https://www.canberra.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Flinders,,,https://www.flinders.edu.au,Potentially generic — manual review needed,,,Not individually verified
+Auckland,,,https://www.auckland.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Otago,,,https://www.otago.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Victoria Wellington,,,https://www.wgtn.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Canterbury,,,https://www.canterbury.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Massey,,,https://www.massey.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Waikato,,,https://www.waikato.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+AUT,,,https://www.aut.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Lincoln,,,https://www.lincoln.ac.nz,Potentially generic — manual review needed,,,Not individually verified
+Seoul National,,,https://www.snu.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+KAIST,,,https://www.kaist.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+POSTECH,,,https://www.postech.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Yonsei,,,https://www.yonsei.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Korea University,,,https://www.korea.edu,Potentially generic — manual review needed,,,Not individually verified
+Sungkyunkwan,,,https://www.skku.edu,Potentially generic — manual review needed,,,Not individually verified
+Hanyang,,,https://www.hanyang.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+UNIST,,,https://www.unist.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+GIST,,,https://www.gist.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+DGIST,,,https://www.dgist.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Kyung Hee,,,https://www.khu.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Ewha,,,https://www.ewha.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Sogang,,,https://www.sogang.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Chung-Ang,,,https://www.cau.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Pusan National,,,https://www.pusan.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Chonnam National,,,https://www.jnu.ac.kr,Potentially generic — manual review needed,,,Not individually verified
+Tokyo,,,https://www.u-tokyo.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Kyoto,,,https://www.kyoto-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Osaka,,,https://www.osaka-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Tohoku,,,https://www.tohoku.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Nagoya,,,https://www.nagoya-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Kyushu,,,https://www.kyushu-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Hokkaido,,,https://www.hokudai.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Tokyo Tech,,,https://www.titech.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Waseda,,,https://www.waseda.jp,Potentially generic — manual review needed,,,Not individually verified
+Keio,,,https://www.keio.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Tsukuba,,,https://www.tsukuba.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Hiroshima,,,https://www.hiroshima-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Kobe,,,https://www.kobe-u.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+APU,,,https://www.apu.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+Sophia,,,https://www.sophia.ac.jp,Potentially generic — manual review needed,,,Not individually verified
+OIST,,,https://www.oist.jp,Potentially generic — manual review needed,,,Not individually verified
+Oxford,,,https://www.ox.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Cambridge,,,https://www.cam.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Imperial,,,https://www.imperial.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+UCL,,,https://www.ucl.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+LSE,,,https://www.lse.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Edinburgh,,,https://www.ed.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+King's College London,,,https://www.kcl.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Manchester,,,https://www.manchester.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Warwick,,,https://www.warwick.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Bristol,,,https://www.bristol.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Glasgow,,,https://www.gla.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+Durham,,,https://www.durham.ac.uk,Potentially generic — manual review needed,,,Not individually verified
+MIT,,,https://www.mit.edu,Potentially generic — manual review needed,,,Not individually verified
+Harvard,,,https://www.harvard.edu,Potentially generic — manual review needed,,,Not individually verified
+Stanford,,,https://www.stanford.edu,Potentially generic — manual review needed,,,Not individually verified
+Caltech,,,https://www.caltech.edu,Potentially generic — manual review needed,,,Not individually verified
+Princeton,,,https://www.princeton.edu,Potentially generic — manual review needed,,,Not individually verified
+Yale,,,https://www.yale.edu,Potentially generic — manual review needed,,,Not individually verified
+Columbia,,,https://www.columbia.edu,Potentially generic — manual review needed,,,Not individually verified
+UChicago,,,https://www.uchicago.edu,Potentially generic — manual review needed,,,Not individually verified
+UC Berkeley,,,https://www.berkeley.edu,Potentially generic — manual review needed,,,Not individually verified
+Cornell,,,https://www.cornell.edu,Potentially generic — manual review needed,,,Not individually verified
+Johns Hopkins,,,https://www.jhu.edu,Potentially generic — manual review needed,,,Not individually verified
+Michigan,,,https://www.umich.edu,Potentially generic — manual review needed,,,Not individually verified
+Carnegie Mellon,,,https://www.cmu.edu,Potentially generic — manual review needed,,,Not individually verified
+Penn,,,https://www.upenn.edu,Potentially generic — manual review needed,,,Not individually verified
+MIT,,,https://oge.mit.edu,Potentially generic — manual review needed,,,Not individually verified
+Harvard GSAS,,,https://gsas.harvard.edu,Potentially generic — manual review needed,,,Not individually verified
+Stanford Graduate Admissions,,,https://gradadmissions.stanford.edu,Potentially generic — manual review needed,,,Not individually verified
+Princeton Graduate School,,,https://gradschool.princeton.edu,Potentially generic — manual review needed,,,Not individually verified
+Yale Graduate School,,,https://gsas.yale.edu,Potentially generic — manual review needed,,,Not individually verified
+Columbia GSAS,,,https://gsas.columbia.edu,Potentially generic — manual review needed,,,Not individually verified
+UChicago Graduate Admissions,,,https://grad.uchicago.edu,Potentially generic — manual review needed,,,Not individually verified
+UC Berkeley Graduate Division,,,https://grad.berkeley.edu,Potentially generic — manual review needed,,,Not individually verified
+Cornell Graduate School,,,https://gradschool.cornell.edu,Potentially generic — manual review needed,,,Not individually verified
+Michigan Rackham,,,https://rackham.umich.edu,Potentially generic — manual review needed,,,Not individually verified
+Caltech Graduate Studies,,,https://www.gradoffice.caltech.edu,Potentially generic — manual review needed,,,Not individually verified
+UCLA Graduate Division,,,https://grad.ucla.edu,Potentially generic — manual review needed,,,Not individually verified
+UC San Diego Graduate,,,https://grad.ucsd.edu,Potentially generic — manual review needed,,,Not individually verified
+UT Austin Graduate School,,,https://gradschool.utexas.edu,Potentially generic — manual review needed,,,Not individually verified
+Georgia Tech Graduate,,,https://grad.gatech.edu,Potentially generic — manual review needed,,,Not individually verified
+Washington Graduate School,,,https://grad.uw.edu,Potentially generic — manual review needed,,,Not individually verified
+Illinois Graduate College,,,https://grad.illinois.edu,Potentially generic — manual review needed,,,Not individually verified
+Wisconsin–Madison Graduate School,,,https://grad.wisc.edu,Potentially generic — manual review needed,,,Not individually verified
+Purdue Graduate School,,,https://www.purdue.edu/gradschool,Specificity not yet manually verified,,,Not individually verified
+Duke Graduate School,,,https://gradschool.duke.edu,Potentially generic — manual review needed,,,Not individually verified
+Northwestern TGS,,,https://www.tgs.northwestern.edu,Potentially generic — manual review needed,,,Not individually verified
+Toronto,,,https://www.utoronto.ca,Potentially generic — manual review needed,,,Not individually verified
+UBC,,,https://www.ubc.ca,Potentially generic — manual review needed,,,Not individually verified
+McGill,,,https://www.mcgill.ca,Potentially generic — manual review needed,,,Not individually verified
+Alberta,,,https://www.ualberta.ca,Potentially generic — manual review needed,,,Not individually verified
+Waterloo,,,https://www.uwaterloo.ca,Potentially generic — manual review needed,,,Not individually verified
+McMaster,,,https://www.mcmaster.ca,Potentially generic — manual review needed,,,Not individually verified
+Montréal,,,https://www.umontreal.ca,Potentially generic — manual review needed,,,Not individually verified
+Queen's,,,https://www.queensu.ca,Potentially generic — manual review needed,,,Not individually verified
+Western,,,https://www.uwo.ca,Potentially generic — manual review needed,,,Not individually verified
+Calgary,,,https://www.ucalgary.ca,Potentially generic — manual review needed,,,Not individually verified
+Tsinghua,,,https://www.tsinghua.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Peking,,,https://www.pku.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Fudan,,,https://www.fudan.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Zhejiang,,,https://www.zju.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Shanghai Jiao Tong,,,https://www.sjtu.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+USTC,,,https://www.ustc.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Nanjing,,,https://www.nju.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Wuhan,,,https://www.whu.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+IIT Bombay,,,https://www.iitb.ac.in,Potentially generic — manual review needed,,,Not individually verified
+IIT Delhi,,,https://www.iitd.ac.in,Potentially generic — manual review needed,,,Not individually verified
+IISc Bangalore,,,https://www.iisc.ac.in,Potentially generic — manual review needed,,,Not individually verified
+JNU,,,https://www.jnu.ac.in,Potentially generic — manual review needed,,,Not individually verified
+Delhi University,,,https://www.du.ac.in,Potentially generic — manual review needed,,,Not individually verified
+BHU,,,https://www.bhu.ac.in,Potentially generic — manual review needed,,,Not individually verified
+Tribhuvan University,,,https://www.tu.edu.np,Potentially generic — manual review needed,,,Not individually verified
+Kathmandu University,,,https://www.ku.edu.np,Potentially generic — manual review needed,,,Not individually verified
+Pokhara University,,,https://www.pu.edu.np,Potentially generic — manual review needed,,,Not individually verified
+TU Munich,,,https://www.tum.de,Potentially generic — manual review needed,,,Not individually verified
+LMU Munich,,,https://www.lmu.de,Potentially generic — manual review needed,,,Not individually verified
+Heidelberg,,,https://www.uni-heidelberg.de,Potentially generic — manual review needed,,,Not individually verified
+Humboldt Berlin,,,https://www.hu-berlin.de,Potentially generic — manual review needed,,,Not individually verified
+FU Berlin,,,https://www.fu-berlin.de,Potentially generic — manual review needed,,,Not individually verified
+TU Berlin,,,https://www.tu-berlin.de,Potentially generic — manual review needed,,,Not individually verified
+RWTH Aachen,,,https://www.rwth-aachen.de,Potentially generic — manual review needed,,,Not individually verified
+KIT,,,https://www.kit.edu,Potentially generic — manual review needed,,,Not individually verified
+Freiburg,,,https://www.uni-freiburg.de,Potentially generic — manual review needed,,,Not individually verified
+ETH Zurich,,,https://www.ethz.ch,Potentially generic — manual review needed,,,Not individually verified
+EPFL,,,https://www.epfl.ch,Potentially generic — manual review needed,,,Not individually verified
+Zurich,,,https://www.uzh.ch,Potentially generic — manual review needed,,,Not individually verified
+Geneva,,,https://www.unige.ch,Potentially generic — manual review needed,,,Not individually verified
+Bern,,,https://www.unibe.ch,Potentially generic — manual review needed,,,Not individually verified
+Vienna,,,https://www.univie.ac.at,Potentially generic — manual review needed,,,Not individually verified
+TU Wien,,,https://www.tuwien.ac.at,Potentially generic — manual review needed,,,Not individually verified
+Graz,,,https://www.uni-graz.at,Potentially generic — manual review needed,,,Not individually verified
+Innsbruck,,,https://www.uibk.ac.at,Potentially generic — manual review needed,,,Not individually verified
+Sorbonne,,,https://www.sorbonne-universite.fr,Potentially generic — manual review needed,,,Not individually verified
+PSL,,,https://www.psl.eu,Potentially generic — manual review needed,,,Not individually verified
+Paris-Saclay,,,https://www.universite-paris-saclay.fr,Potentially generic — manual review needed,,,Not individually verified
+Sciences Po,,,https://www.sciencespo.fr,Potentially generic — manual review needed,,,Not individually verified
+Polytechnique,,,https://www.polytechnique.edu,Potentially generic — manual review needed,,,Not individually verified
+Leiden,,,https://www.universiteitleiden.nl,Potentially generic — manual review needed,,,Not individually verified
+Amsterdam,,,https://www.uva.nl,Potentially generic — manual review needed,,,Not individually verified
+Delft,,,https://www.tudelft.nl,Potentially generic — manual review needed,,,Not individually verified
+Utrecht,,,https://www.uu.nl,Potentially generic — manual review needed,,,Not individually verified
+Wageningen,,,https://www.wur.nl,Potentially generic — manual review needed,,,Not individually verified
+KU Leuven,,,https://www.kuleuven.be,Potentially generic — manual review needed,,,Not individually verified
+Ghent,,,https://www.ugent.be,Potentially generic — manual review needed,,,Not individually verified
+Copenhagen,,,https://www.ku.dk,Potentially generic — manual review needed,,,Not individually verified
+DTU,,,https://www.dtu.dk,Potentially generic — manual review needed,,,Not individually verified
+Aarhus,,,https://www.au.dk,Potentially generic — manual review needed,,,Not individually verified
+Uppsala,,,https://www.uu.se,Potentially generic — manual review needed,,,Not individually verified
+Lund,,,https://www.lu.se,Potentially generic — manual review needed,,,Not individually verified
+KTH,,,https://www.kth.se,Potentially generic — manual review needed,,,Not individually verified
+Stockholm,,,https://www.su.se,Potentially generic — manual review needed,,,Not individually verified
+Oslo,,,https://www.uio.no,Potentially generic — manual review needed,,,Not individually verified
+NTNU,,,https://www.ntnu.no,Potentially generic — manual review needed,,,Not individually verified
+Helsinki,,,https://www.helsinki.fi,Potentially generic — manual review needed,,,Not individually verified
+Aalto,,,https://www.aalto.fi,Potentially generic — manual review needed,,,Not individually verified
+Bologna,,,https://www.unibo.it,Potentially generic — manual review needed,,,Not individually verified
+Politecnico di Milano,,,https://www.polimi.it,Potentially generic — manual review needed,,,Not individually verified
+Sapienza Rome,,,https://www.uniroma1.it,Potentially generic — manual review needed,,,Not individually verified
+Padova,,,https://www.unipd.it,Potentially generic — manual review needed,,,Not individually verified
+Barcelona,,,https://www.ub.edu,Potentially generic — manual review needed,,,Not individually verified
+Autónoma Madrid,,,https://www.uam.es,Potentially generic — manual review needed,,,Not individually verified
+Complutense Madrid,,,https://www.ucm.es,Potentially generic — manual review needed,,,Not individually verified
+Lisbon,,,https://www.ulisboa.pt,Potentially generic — manual review needed,,,Not individually verified
+Porto,,,https://www.up.pt,Potentially generic — manual review needed,,,Not individually verified
+Athens,,,https://www.uoa.gr,Potentially generic — manual review needed,,,Not individually verified
+Warsaw,,,https://www.uw.edu.pl,Potentially generic — manual review needed,,,Not individually verified
+Jagiellonian,,,https://www.uj.edu.pl,Potentially generic — manual review needed,,,Not individually verified
+Charles University,,,https://www.cuni.cz,Potentially generic — manual review needed,,,Not individually verified
+CTU Prague,,,https://www.cvut.cz,Potentially generic — manual review needed,,,Not individually verified
+ELTE Budapest,,,https://www.elte.hu,Potentially generic — manual review needed,,,Not individually verified
+BME Budapest,,,https://www.bme.hu,Potentially generic — manual review needed,,,Not individually verified
+Tartu,,,https://www.ut.ee,Potentially generic — manual review needed,,,Not individually verified
+Moscow State,,,https://www.msu.ru,Potentially generic — manual review needed,,,Not individually verified
+HSE,,,https://www.hse.ru,Potentially generic — manual review needed,,,Not individually verified
+Saint Petersburg State,,,https://www.spbu.ru,Potentially generic — manual review needed,,,Not individually verified
+MIPT,,,https://www.mipt.ru,Potentially generic — manual review needed,,,Not individually verified
+METU,,,https://www.metu.edu.tr,Potentially generic — manual review needed,,,Not individually verified
+Boğaziçi,,,https://www.bogazici.edu.tr,Potentially generic — manual review needed,,,Not individually verified
+Koç,,,https://www.ku.edu.tr,Potentially generic — manual review needed,,,Not individually verified
+Trinity College Dublin,,,https://www.tcd.ie,Potentially generic — manual review needed,,,Not individually verified
+UCD,,,https://www.ucd.ie,Potentially generic — manual review needed,,,Not individually verified
+University of Galway,,,https://www.universityofgalway.ie,Potentially generic — manual review needed,,,Not individually verified
+UCC,,,https://www.ucc.ie,Potentially generic — manual review needed,,,Not individually verified
+Nepal — Ministry of Education,,,https://www.moest.gov.np,Potentially generic — manual review needed,,,Not individually verified
+India — Study in India,,,https://www.studyinindia.gov.in,Potentially generic — manual review needed,,,Not individually verified
+China — CSC,,,https://www.csc.edu.cn,Potentially generic — manual review needed,,,Not individually verified
+Japan — Study in Japan,,,https://www.studyinjapan.go.jp,Potentially generic — manual review needed,,,Not individually verified
+Korea — Study in Korea,,,https://www.studyinkorea.go.kr,Potentially generic — manual review needed,,,Not individually verified
+Australia — Study Australia,,,https://www.studyaustralia.gov.au,Potentially generic — manual review needed,,,Not individually verified
+New Zealand — Study NZ,,,https://www.studyinnewzealand.govt.nz,Potentially generic — manual review needed,,,Not individually verified
+USA — EducationUSA,,,https://www.educationusa.state.gov,Potentially generic — manual review needed,,,Not individually verified
+Canada — EduCanada,,,https://www.educanada.ca,Potentially generic — manual review needed,,,Not individually verified
+UK — Study UK,,,https://www.study-uk.britishcouncil.org,Potentially generic — manual review needed,,,Not individually verified
+Germany — DAAD,,,https://www.daad.de,Potentially generic — manual review needed,,,Not individually verified
+France — Campus France,,,https://www.campusfrance.org,Potentially generic — manual review needed,,,Not individually verified
+Netherlands — Study in Holland,,,https://www.studyinholland.nl,Potentially generic — manual review needed,,,Not individually verified
+Sweden — Study in Sweden,,,https://www.studyinsweden.se,Potentially generic — manual review needed,,,Not individually verified
+Norway — Study in Norway,,,https://www.studyinnorway.no,Potentially generic — manual review needed,,,Not individually verified
+Denmark — Study in Denmark,,,https://www.studyindenmark.dk,Potentially generic — manual review needed,,,Not individually verified
+Finland — Study in Finland,,,https://www.studyinfinland.fi,Potentially generic — manual review needed,,,Not individually verified
+Switzerland — Swiss Universities,,,https://www.swissuniversities.ch,Potentially generic — manual review needed,,,Not individually verified
+Austria — OeAD,,,https://www.oead.at,Potentially generic — manual review needed,,,Not individually verified
+Italy — Study in Italy,,,https://www.studyinitaly.esteri.it,Potentially generic — manual review needed,,,Not individually verified
+Spain — SEPIE,,,https://www.sepie.es,Potentially generic — manual review needed,,,Not individually verified
+Ireland — Study in Ireland,,,https://www.educationinireland.com,Potentially generic — manual review needed,,,Not individually verified
+Belgium — Study in Flanders,,,https://www.studyinflanders.be,Potentially generic — manual review needed,,,Not individually verified
+Poland — NAWA,,,https://www.nawa.gov.pl,Potentially generic — manual review needed,,,Not individually verified
+Czechia — Study in Czechia,,,https://www.studyin.cz,Potentially generic — manual review needed,,,Not individually verified
+Hungary — Study in Hungary,,,https://www.studyinhungary.hu,Potentially generic — manual review needed,,,Not individually verified
+Portugal — Study in Portugal,,,https://www.studyinportugal.edu.pt,Potentially generic — manual review needed,,,Not individually verified
+Estonia — Study in Estonia,,,https://www.studyinestonia.ee,Potentially generic — manual review needed,,,Not individually verified
+Russia — Education in Russia,,,https://www.education-in-russia.com,Potentially generic — manual review needed,,,Not individually verified
+Europe — Erasmus+,,,https://www.erasmus-plus.ec.europa.eu,Potentially generic — manual review needed,,,Not individually verified
+Erasmus Mundus Euroculture Joint Master (2027–2029),Scholarship,Europe,https://www.euroculturemaster.eu/application-procedure/,Official programme-specific application source,2027-01-15,European studies; Cultural studies; Society and politics; Intercultural studies,Official source checked 2026-11-19; Erasmus Mundus scholarship deadline; self-funded admission has later dates
+Erasmus Mundus IMSOGLO — International Master in Soils and Global Change (2027),Scholarship,Europe,https://imsoglo.eu/wp-content/uploads/2026/09/IMSOGLO-Application-Manual-2027.pdf,Official programme-specific application source,2027-02-28,Soil science; Soil and global change; Environmental science; Agricultural science,Official source checked 2026-11-19; Scholarship deadline for September 2027 intake; separate self-funded EEA deadline
+Erasmus Mundus GeoPlaNet (2027) — Self-funded only,Scholarship,Europe,https://geoplanet-impg.eu/en/apply,Official programme-specific application source,2027-02-28,Planetary science; Geoscience; Space science,Official source checked 2026-11-19; Self-funded admission only; Erasmus Mundus scholarships unavailable for this intake

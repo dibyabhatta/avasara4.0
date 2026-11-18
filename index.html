@@ -105,12 +105,12 @@
 <select id="fl"><option value="">All levels</option><option value="S">Grade 11–12</option><option value="B">Bachelor</option><option value="M">Master</option><option value="P">PhD</option></select>
 <select id="fd"><option value="">All destinations</option></select>
 <select id="ffield"><option value="">All fields</option><option>Engineering & Technology</option><option>Computer Science, AI & Data Science</option><option>Medicine & Health</option><option>Biological Sciences & Biotechnology</option><option>Chemistry, Physics & Mathematics</option><option>Environmental Science & Climate</option><option>Agriculture & Food Science</option><option>Business, Economics & Finance</option><option>Law & International Relations</option><option>Social Sciences & Psychology</option><option>Education</option><option>Arts, Humanities & Languages</option><option>Architecture & Design</option><option>Media & Communications</option><option>Public Policy & Development</option></select>
-<select id="ff"><option value="">Any funding</option><option>Fully funded</option><option>Partial</option><option>Paid</option><option>Varies</option></select>
+<select id="fverified"><option value="">Any verification status</option><option value="verified">Verified deadline</option><option value="unverified">Needs verification</option></select><select id="fdeadline"><option value="">Any deadline</option><option value="7">Within 7 days</option><option value="14">Within 14 days</option><option value="30">Within 30 days</option><option value="60">Within 60 days</option><option value="90">Within 90 days</option></select><select id="ff"><option value="">Any funding</option><option>Fully funded</option><option>Partial</option><option>Paid</option><option>Varies</option></select>
 <select id="fs"><option value="">All sources</option><option value="curated">Curated by Avasara</option><option value="community">Shared by community</option></select>
 <label class="open-now"><input type="checkbox" id="fo"> Open around now</label>
 <button class="btn" id="clr">Clear</button></div>
-<p class="note" id="cnt"></p><div class="grid" id="grid"></div>
-<p class="note">Listings are leads, not guarantees. “Timing” is the usual window or last confirmed cycle, so confirm the exact deadline on the official page, then add it in Tracker 2.0.</p>
+<p class="note" id="cnt" aria-live="polite"></p><div class="grid" id="grid"></div>
+<p class="note">Listings are leads, not guarantees. Exact deadlines and subjects are shown only where independently checked; otherwise they are marked unverified. Never treat a typical timing window as an application deadline. Confirm requirements on the official page.</p>
 <p>Know one we missed? <a class="btn js-submit" href="mailto:agridibu@gmail.com?subject=Avasara%20opportunity%20suggestion">Submit an opportunity ↗</a></p></section>
 </div>
 <div data-view="destinations">
@@ -137,9 +137,9 @@
 <label class="chk"><input type="checkbox" id="cvpd"> Include date of birth and nationality</label>
 <label>Photo file (optional, not saved)</label><input type="file" id="cvphoto" accept="image/*">
 <div id="cvfields"></div></div>
-<div><p><button class="btn dk" id="cvprint">Print / Save PDF ↗</button> <button class="btn" id="cvword">Download editable Word template</button> <a class="btn" href="https://europass.europa.eu/en/create-europass-cv" target="_blank" rel="noopener">Europass CV ↗</a></p><div id="cvprev"></div>
+<div><p><button class="btn dk" id="cvprint">Print / Save PDF ↗</button> <a class="btn" href="#cvtemplates">Browse Word CV templates ↓</a> <a class="btn" href="https://europass.europa.eu/en/create-europass-cv" target="_blank" rel="noopener">Europass CV ↗</a></p><div id="cvprev"></div>
 <p class="note">In the print window choose “Save as PDF”. Conventions shown are typical; always follow the program’s own instructions.</p></div></div>
-<div id="tk-em" class="tk" style="display:none"><div>
+<section id="cvtemplates" style="margin:26px 0 34px"><h3 style="font-size:22px">Choose a Word CV / résumé template</h3><p class="note">Preview the layout here, then download an editable .docx file with guided placeholders. Choose the format requested by the scholarship or employer.</p><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px"><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Research interests<hr>Education<hr>Publications<hr>Grants</small></div><h4 style="margin:12px 0 4px">Academic Research CV</h4><p class="note">PhD · postdoctoral · publications</p><a class="btn dk" href="cv-templates/academic-research.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Referees</small></div><h4 style="margin:12px 0 4px">Australian CV</h4><p class="note">Australia · New Zealand</p><a class="btn dk" href="cv-templates/australian.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Education<hr>Experience<hr>Projects<hr>Skills</small></div><h4 style="margin:12px 0 4px">US Résumé</h4><p class="note">Internships · industry · 1 page</p><a class="btn dk" href="cv-templates/us-resume.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Skills</small></div><h4 style="margin:12px 0 4px">UK CV</h4><p class="note">UK master’s · graduate roles</p><a class="btn dk" href="cv-templates/uk-cv.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Profile<hr>Education<hr>Experience<hr>Languages</small></div><h4 style="margin:12px 0 4px">European CV</h4><p class="note">European applications · skills</p><a class="btn dk" href="cv-templates/europass-inspired.docx" download>Choose template ↓</a></article><article class="card" style="padding:16px"><div style="background:#fff;color:#243b34;border:1px solid #ddd;padding:14px;min-height:140px;font-family:Georgia,serif"><strong style="font-size:15px">YOUR NAME</strong><hr><small>Education<hr>Awards<hr>Volunteering<hr>Projects</small></div><h4 style="margin:12px 0 4px">Scholarship Student CV</h4><p class="note">Bachelor’s · master’s applicants</p><a class="btn dk" href="cv-templates/scholarship-student.docx" download>Choose template ↓</a></article></div></section><div id="tk-em" class="tk" style="display:none"><div>
 <label>Professor’s country</label><select id="emdest"></select>
 <label>Type of email</label><select id="emtype"><option value="phd">PhD supervisor enquiry</option><option value="master">Master’s (research) enquiry</option><option value="intern">Summer research / internship</option><option value="follow">Follow-up (no reply yet)</option><option value="scholar">Scholarship eligibility question</option><option value="ref">Reference request to a referee</option></select>
 <div id="emfields"></div></div>
@@ -148,6 +148,9 @@
 <p class="note">Tips: keep it under 200 words, attach your CV as a PDF, mention one specific paper, and follow up once after 10–14 days. Replace every [bracket] before sending.</p></div></div>
 </div></section>
 </div>
+<div data-view="accessibility">
+<section id="accessibility"><div class="eyebrow">Accessibility</div><h2>Make AVASARA <em>yours.</em></h2><p>Choose a comfortable reading experience. Preferences stay on this device. Use Tab to move between controls, Enter to activate buttons, and Escape to close the accessibility panel.</p>
+<div class="grid"><div class="card"><h3>Reading preferences</h3><label for="a-font">Text size</label><select id="a-font"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select><label class="chk"><input type="checkbox" id="a-contrast"> High contrast</label><label class="chk"><input type="checkbox" id="a-motion"> Reduce animation</label><label class="chk"><input type="checkbox" id="a-underline"> Underline links</label><p><button class="btn" id="a-reset">Reset preferences</button></p></div><div class="card"><h3>Keyboard & screen readers</h3><p>Skip to content using the first keyboard link. Opportunity search results announce updates to assistive technology. Form controls have accessible names.</p><p>Need another format? The Word templates can be edited with accessible headings in Microsoft Word or compatible editors.</p></div></div></section></div>
 <div data-view="academy">
 <section id="academy"><div class="eyebrow">Avasara Academy</div><h2>Apply <em>smarter.</em></h2><div class="grid">
 <div class="card"><div class="tags"><span>Step 1</span></div><h3>Check eligibility</h3><p>Citizenship, degree level, GPA, language score and field. Rule out mismatches before you write anything.</p></div>
@@ -286,7 +289,7 @@
  */
 const AVASARA = {
   opportunities: [
-    {"name":"Marie Skłodowska-Curie Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"},
+    {"name":"Marie Skłodowska-Curie Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2027","deadline":"2027-09-08","deadlineTime":"17:00 CEST","deadlineStatus":"Published for 2027 call","verifiedOn":"2026-11-19","fieldCategory":"All research disciplines","majors":["Research across disciplines; subject to call eligibility"],"source":"https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2027"},
     {"name":"Alexander von Humboldt Research Fellowship","type":"Postdoctoral","levels":["P"],"country":"Germany","funding":"Fully funded","url":"https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship"},
     {"name":"JSPS Postdoctoral Fellowship for Research in Japan","type":"Postdoctoral","levels":["P"],"country":"Japan","funding":"Fully funded","url":"https://www.jsps.go.jp/english/e-fellow/"},
     {"name":"EMBO Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Europe / Global","funding":"Fully funded","url":"https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships/"},
@@ -302,7 +305,7 @@ const AVASARA = {
     {"name":"Wellcome Early-Career Awards","type":"Postdoctoral","levels":["P"],"country":"United Kingdom / Global","funding":"Varies","url":"https://wellcome.org/grant-funding/schemes/early-career-awards"},
     {"name":"NIH Postdoctoral Research Opportunities","type":"Postdoctoral","levels":["P"],"country":"USA","funding":"Paid","url":"https://www.training.nih.gov/"},
     {"name":"Banting Postdoctoral Fellowships","type":"Postdoctoral","levels":["P"],"country":"Canada","funding":"Fully funded","url":"https://banting.fellowships-bourses.gc.ca/"},
-    {"name":"Chevening Scholarships","type":"Scholarship","levels":["M"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.chevening.org"},
+    {"name":"Chevening Scholarships","type":"Scholarship","levels":["M"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.chevening.org/scholarships/application-timeline/","deadline":"2026-10-06","deadlineTime":"11:00 UTC","deadlineStatus":"Closed: 2027–28 application cycle","verifiedOn":"2026-11-19","fieldCategory":"Multiple disciplines","majors":["Eligible UK taught master’s courses; check course-specific eligibility"],"source":"https://www.chevening.org/scholarships/application-timeline/"},
     {"name":"Commonwealth Scholarships","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://cscuk.fcdo.gov.uk"},
     {"name":"Gates Cambridge","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.gatescambridge.org"},
     {"name":"Rhodes Scholarship (Oxford)","type":"Scholarship","levels":["M","P"],"country":"United Kingdom","funding":"Fully funded","url":"https://www.rhodeshouse.ox.ac.uk"},
@@ -909,7 +912,7 @@ const AVASARA = {
 
   /* ---------- 3. Opportunity board ---------- */
 
-  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff", "#fs", "#fo", "#ffield"];
+  const FILTER_IDS = ["#q", "#ft", "#fl", "#fd", "#ff", "#fs", "#fo", "#ffield", "#fverified", "#fdeadline"];
 
   function inferField(opp) {
     const t = `${opp.name} ${opp.field || ""}`.toLowerCase();
@@ -935,13 +938,17 @@ const AVASARA = {
 
   function matchesFilters(opp) {
     const query = $("#q").value.toLowerCase();
+    const verification = $("#fverified").value, deadlineDays = Number($("#fdeadline").value);
+    const deadlineDelta = opp.deadline ? daysUntil(opp.deadline) : null;
     const type = $("#ft").value, level = $("#fl").value, country = $("#fd").value, funding = $("#ff").value, source = $("#fs").value, field = $("#ffield")?.value || "";
-    return (!type || opp.type === type)
+    return (!verification || (verification === "verified" ? Boolean(opp.verifiedOn && opp.deadline) : !opp.verifiedOn || !opp.deadline))
+      && (!deadlineDays || (deadlineDelta !== null && deadlineDelta >= 0 && deadlineDelta <= deadlineDays))
+      && (!type || opp.type === type)
       && (!level || opp.levels.includes(level))
       && (!country || opp.country === country)
       && (!funding || opp.funding === funding)
       && (!field || (opp.fieldCategory || inferField(opp)).includes(field))
-      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""}`.toLowerCase().includes(query))
+      && (!query || `${opp.name} ${opp.country} ${opp.type} ${opp.field || ""} ${opp.fieldCategory || ""} ${(opp.majors || []).join(" ")}`.toLowerCase().includes(query))
       && (!source || (source === "community") === Boolean(opp.community))
       && (!$("#fo").checked || isOpenNow(opp))
       && !($("#hide").checked && checkEligibility(opp).status === "no");
@@ -956,7 +963,7 @@ const AVASARA = {
       ${badgeHtml(opp)}
       <h3>${escapeHtml(opp.name)}</h3>
       ${note}
-      ${keyDetailsHtml(opp)}
+      ${!opp.community ? `<p class="note"><b>Subjects / majors:</b> ${opp.majors?.length ? escapeHtml(opp.majors.join(" · ")) : "Not yet verified — consult official course eligibility"}</p><p class="note"><b>Official deadline:</b> ${opp.deadline ? escapeHtml(opp.deadline + (opp.deadlineTime ? " · " + opp.deadlineTime : "")) : "Not yet verified — check the official page"}${opp.deadlineStatus ? " · " + escapeHtml(opp.deadlineStatus) : ""}</p><p class="note"><b>Link review:</b> ${opp.verifiedOn ? "Checked " + escapeHtml(opp.verifiedOn) : "Awaiting individual verification"}</p>` : ""}${keyDetailsHtml(opp)}
       <div class="row">
         <a class="btn dk" href="${opp.url}" target="_blank" rel="noopener">Official page ↗</a>
         <button class="btn" data-track="${escapeHtml(opp.name)}">＋ Track</button>
@@ -1429,10 +1436,6 @@ const AVASARA = {
     $("#cvphoto").addEventListener("change", e => { const f = e.target.files[0]; if (!f)
         return; const r = new FileReader(); r.onload = () => { photo = r.result; cv(); }; r.readAsDataURL(f); });
     $("#cvprint").onclick = () => window.print();
-    $("#cvword").onclick = () => {
-      const content = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Arial,sans-serif;color:#23352f;margin:36px}h3{font-size:22px;margin:0 0 8px}h4{border-bottom:1px solid #999;padding-bottom:4px;margin-top:20px}p,li{font-size:11pt;line-height:1.45}img{max-width:100px;max-height:120px}</style></head><body>${$("#cvprev").innerHTML}</body></html>`;
-      const blob = new Blob([content], {type:"application/msword"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="Avasara-CV-Template.doc"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-    };
     $("#emcopy").onclick = async () => { const v = $("#emout"); try {
         await navigator.clipboard.writeText(v.value);
     }
@@ -1456,7 +1459,7 @@ const AVASARA = {
 <script>
 /* Show each tab as a section of this one page, using the URL hash (#tracker, #about ...). */
 (() => {
-  const VIEWS = ["home","scholarships","destinations","tracker","toolkit","academy","about"];
+  const VIEWS = ["home","scholarships","destinations","tracker","toolkit","academy","about","accessibility"];
   const VIEW_OF = { soon: "home", match: "scholarships", board: "scholarships", unis: "destinations", portals: "destinations" };
   document.querySelectorAll("a[href]").forEach((a) => {
     const m = a.getAttribute("href").match(/^(index|scholarships|destinations|tracker|toolkit|academy|about)\.html(#.*)?$/);
@@ -1476,4 +1479,17 @@ const AVASARA = {
 <script>
 (() => { const form=document.getElementById('globalSearch'); if(!form)return; form.addEventListener('submit',e=>{e.preventDefault(); const q=document.getElementById('globalQ').value.trim(); location.hash='scholarships'; setTimeout(()=>{const local=document.getElementById('q'); if(local){local.value=q; local.dispatchEvent(new Event('input',{bubbles:true})); local.focus();}},80); }); })();
 </script>
+<style>
+.skip-av{position:absolute;left:8px;top:-100px;z-index:9999;background:#fff;color:#111;padding:12px}.skip-av:focus{top:8px}
+body.av-high-contrast{filter:contrast(1.35)}body.av-underlined a{text-decoration:underline!important}
+body.av-reduce-motion *,body.av-reduce-motion *::before,body.av-reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+:focus-visible{outline:3px solid #c77b22!important;outline-offset:3px}
+.av-float{position:fixed;right:16px;bottom:16px;z-index:1000;border-radius:30px;padding:12px 16px;background:#183e35;color:#fff;border:2px solid #fff;box-shadow:0 3px 14px #0004;cursor:pointer}
+.av-dialog{position:fixed;right:16px;bottom:74px;z-index:1001;background:var(--bg,#fff);color:inherit;border:2px solid currentColor;border-radius:12px;padding:20px;max-width:min(350px,calc(100vw - 32px));box-shadow:0 5px 25px #0004}
+.av-dialog label{display:block;margin:10px 0}.av-dialog button{margin:4px}
+</style>
+<a class="skip-av" href="#board" id="skipAv">Skip to opportunities</a>
+<button class="av-float" id="accessOpen" aria-expanded="false" aria-controls="accessPanel">♿ Accessibility</button>
+<div class="av-dialog" id="accessPanel" hidden role="dialog" aria-label="Accessibility preferences"><h3>Accessibility preferences</h3><label>Text size <select id="quickFont"><option value="100">Standard</option><option value="112">Larger</option><option value="125">Extra large</option><option value="140">Very large</option></select></label><label><input id="quickContrast" type="checkbox"> High contrast</label><label><input id="quickMotion" type="checkbox"> Reduce motion</label><label><input id="quickUnderline" type="checkbox"> Underline links</label><button class="btn" id="quickReset">Reset</button><button class="btn dk" id="accessClose">Close</button><p><a href="#accessibility" id="accessDetails">Full accessibility information</a></p></div>
+<script src="enhancements.js" defer></script>
 </body></html>
