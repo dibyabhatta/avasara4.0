@@ -708,35 +708,94 @@ a.card:hover { border-color: var(--gold); }
 @media (max-width: 900px) { .tk > div:first-child, #cvprev { max-height: none; } }
 @media print { #cvprev { max-height: none !important; overflow: visible !important; } }
 
-.founder-intro {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 35px;
+
+/* Founder story — editorial layout */
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 760px);
+  gap: 65px;
+  justify-content: center;
+  align-items: start;
+  padding: 35px 0 55px;
+}
+
+.founder-sidebar {
+  position: sticky;
+  top: 115px;
 }
 
 .founder-photo {
-  width: 155px;
-  height: 180px;
+  width: 100%;
+  max-width: 230px;
+  height: 280px;
   object-fit: cover;
   object-position: center;
-  border-radius: 12px;
-  flex-shrink: 0;
+  border-radius: 4px;
+  display: block;
 }
 
-.founder-story {
-  max-width: 760px;
+.founder-name {
+  color: var(--ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  margin: 18px 0 0;
 }
 
-@media (max-width: 600px) {
-  .founder-intro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+.founder-role {
+  font-size: 13px;
+  margin: 3px 0;
+  opacity: .8;
+}
+
+.founder-sidebar .btn {
+  margin-top: 20px;
+}
+
+.founder-story h2 {
+  margin-bottom: 25px;
+}
+
+.founder-lead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 25px;
+}
+
+.founder-story > p {
+  line-height: 1.9;
+  margin: 0 0 19px;
+}
+
+.founder-quote {
+  border-left: 3px solid var(--gold);
+  padding: 15px 22px;
+  margin: 30px 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+  line-height: 1.5;
+  color: var(--gold);
+}
+
+.founder-signoff {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .founder-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .founder-sidebar {
+    position: static;
   }
 
   .founder-photo {
-    width: 135px;
-    height: 155px;
+    width: 155px;
+    height: 180px;
   }
 }
