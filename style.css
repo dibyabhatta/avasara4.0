@@ -709,7 +709,7 @@ a.card:hover { border-color: var(--gold); }
 @media print { #cvprev { max-height: none !important; overflow: visible !important; } }
 
 
-/* Founder story — editorial layout */
+/* Founder section — final layout */
 
 .founder-layout {
   display: grid;
@@ -726,26 +726,23 @@ a.card:hover { border-color: var(--gold); }
 }
 
 .founder-photo {
+  display: block;
   width: 100%;
   max-width: 230px;
   height: 280px;
   object-fit: cover;
   object-position: center;
-  border-radius: 4px;
-  display: block;
+  border-radius: 5px;
 }
 
 .founder-name {
-  color: var(--ink);
-  font-family: 'Playfair Display', Georgia, serif;
   font-size: 24px;
-  margin: 18px 0 0;
+  margin: 18px 0 5px;
 }
 
 .founder-role {
   font-size: 13px;
-  margin: 3px 0;
-  opacity: .8;
+  margin: 4px 0;
 }
 
 .founder-sidebar .btn {
@@ -761,12 +758,11 @@ a.card:hover { border-color: var(--gold); }
   font-size: 23px;
   line-height: 1.5;
   color: var(--ink);
-  margin-bottom: 25px;
 }
 
 .founder-story > p {
   line-height: 1.9;
-  margin: 0 0 19px;
+  margin-bottom: 19px;
 }
 
 .founder-quote {
@@ -781,7 +777,6 @@ a.card:hover { border-color: var(--gold); }
 
 .founder-signoff {
   color: var(--ink);
-  font-weight: 500;
 }
 
 @media (max-width: 700px) {
@@ -799,3 +794,4 @@ a.card:hover { border-color: var(--gold); }
     height: 180px;
   }
 }
+
