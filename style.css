@@ -945,3 +945,11 @@ h2 { font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; }
   height: 100%;
   border: 0;
 }
+
+.nav-inner {
+  gap: 22px;
+}
+
+.brand {
+  margin-right: 12px;
+}
