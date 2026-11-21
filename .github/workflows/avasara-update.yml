@@ -9,24 +9,33 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: avasara-review-sync
+  cancel-in-progress: false
+
 jobs:
   check-opportunities:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
-      - name: Checkout AVASARA
+      - name: Checkout public AVASARA repository
         uses: actions/checkout@v4
+        with:
+          path: public
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Import reviewed opportunities
+      - name: Discover and import opportunities
+        working-directory: public
         run: python automation/import_opportunities.py
 
       - name: Monitor official pages
+        working-directory: public
         run: python automation/monitor_official_pages.py
 
       - name: Upload review results
@@ -35,7 +44,127 @@ jobs:
         with:
           name: avasara-review-results
           path: |
-            automation/import-status.json
-            automation/review-queue.json
-            automation/page-change-review.json
+            public/automation/import-status.json
+            public/automation/review-queue.json
+            public/automation/page-change-review.json
           if-no-files-found: warn
+
+      - name: Check private review token
+        env:
+          REVIEW_TOKEN: ${{ secrets.AVASARA_REVIEW_TOKEN }}
+        run: |
+          if [ -z "$REVIEW_TOKEN" ]; then
+            echo "::error::AVASARA_REVIEW_TOKEN is missing"
+            exit 1
+          fi
+
+      - name: Checkout private review repository
+        uses: actions/checkout@v4
+        with:
+          repository: dibyabhatta/avasara-review
+          token: ${{ secrets.AVASARA_REVIEW_TOKEN }}
+          path: private-review
+          persist-credentials: true
+
+      - name: Merge discoveries into private queue
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlsplit, urlunsplit
+
+          source = Path("public/automation/review-queue.json")
+          destination = Path("private-review/review-queue.json")
+
+          if not source.exists():
+              raise SystemExit("Discovery queue missing; refusing to sync")
+
+          discovered = json.loads(source.read_text(encoding="utf-8"))
+          existing = json.loads(destination.read_text(encoding="utf-8"))
+
+          if not isinstance(discovered, list) or not isinstance(existing, list):
+              raise SystemExit("Both queues must contain JSON arrays")
+
+          def key(record):
+              if not isinstance(record, dict):
+                  return ""
+              url = record.get("url")
+              if not isinstance(url, str):
+                  return ""
+              try:
+                  parsed = urlsplit(url.strip())
+                  if parsed.scheme != "https" or not parsed.hostname:
+                      return ""
+                  if parsed.username or parsed.password:
+                      return ""
+                  return urlunsplit((
+                      "https",
+                      parsed.netloc.lower(),
+                      parsed.path.rstrip("/") or "/",
+                      parsed.query,
+                      ""
+                  ))
+              except ValueError:
+                  return ""
+
+          # Preserve all existing records, including editorial decisions.
+          merged = {}
+          for record in existing:
+              k = key(record)
+              if k:
+                  merged[k] = record
+
+          added = 0
+
+          for record in discovered:
+              k = key(record)
+              if not k or k in merged:
+                  continue
+
+              # Discovery cannot grant itself editorial approval.
+              item = {
+                  field: value
+                  for field, value in record.items()
+                  if field not in {
+                      "reviewed",
+                      "officialSourceConfirmed",
+                      "verifiedBy",
+                      "verifiedOn",
+                      "verificationNotes",
+                      "verificationStatus"
+                  }
+              }
+              item["reviewed"] = False
+              item["reviewStatus"] = "pending"
+              merged[k] = item
+              added += 1
+
+          destination.write_text(
+              json.dumps(
+                  list(merged.values()),
+                  ensure_ascii=False,
+                  indent=2
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Added {added} new opportunities")
+          print(f"Private queue now contains {len(merged)} records")
+          PY
+
+      - name: Save private review queue
+        working-directory: private-review
+        shell: bash
+        run: |
+          git config user.name "AVASARA Review Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add review-queue.json
+
+          if git diff --cached --quiet; then
+            echo "No new opportunities to save"
+          else
+            git commit -m "Sync newly discovered AVASARA opportunities"
+            git push
+          fi
